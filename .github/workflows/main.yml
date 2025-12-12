@@ -1,11 +1,11 @@
-name: Build Medureon
+name: Build + Deploy Medureon
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,3 +17,18 @@ jobs:
 
       - run: npm install
       - run: npm run build
+
+      - name: Add host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H SEU_HOST >> ~/.ssh/known_hosts
+
+      - name: Deploy to CyberPanel
+        uses: burnett01/rsync-deployments@v7
+        with:
+          switches: -avz --delete
+          path: dist/
+          remote_path: /home/restauracaoeliberdade.com.br/public_html
+          remote_host: SEU_HOST
+          remote_user: resta2727
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
