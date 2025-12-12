@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Call Support",
+    "value": "+1 (800) 123-4567",
+    "link": "tel:18001234567"
+  },
+  {
+    "title": "Email Address",
+    "value": "info@medureon.com",
+    "link": "mailto:info@medureon.com"
+  },
+  {
+    "title": "Location Details",
+    "value": "2118 Thornridge Cir. Syracuse, Conn ecticut 35624"
+  }
+]

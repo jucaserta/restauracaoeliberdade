@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Susan Lin",
+        "role": "CEO, ABC Center",
+        "image": "/images/client-image-1.png",
+        "quote": "“I was nervous about my joint pain, but they made everything easier. Dr. Ayesha explained my condition clearly and gave me a recovery plan that worked like magic. I can walk pain-free again!  I felt safe every step of the way.”"
+    },
+    {
+        "name": "John Melt",
+        "role": "CTO, XYZ Center",
+        "image": "/images/client-image-2.png",
+        "quote": "I was really anxious about my joint pain, but the team made the whole process so much easier. Dr. Ayesha explained my condition in a way I could understand and gave me a recovery plan that truly worked. Now I can walk without pain again - I felt supported and safe throughout my entire journey."
+    }
+
+]

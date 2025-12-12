@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"title": "Top Pediatric Health Tips for New Parents",
+		"description": "Raising a healthy child starts with the right information from trusted doctors which can change your lifestyle.",
+		"published": "May 15, 2025",
+		"author": "Dr. Emily Carter",
+		"image": "/images/post-image-1.jpg",
+		"slug": "top-pediatric-health-tips-for-new-parents"
+	},
+	{
+		"id": 2,
+		"title": "How to Boost Your Child's Immunity Naturally",
+		"description": "Explore doctor-approved methods to enhance your child's immune system using nutrition, sleep, and natural remedies.",
+		"published": "June 5, 2025",
+		"author": "Dr. James Nguyen",
+		"image": "/images/post-image-2.jpg",
+		"slug": "how-to-boost-your-childs-immunity-naturally"
+	},
+	{
+		"id": 3,
+		"title": "Screen Time and Kids: What Parents Need to Know",
+		"description": "Learn how to set healthy screen time boundaries and encourage more active, mindful habits in children.",
+		"published": "July 12, 2025",
+		"author": "Dr. Sarah Mitchell",
+		"image": "/images/post-image-3.jpg",
+		"slug": "screen-time-and-kids-what-parents-need-to-know"
+	},
+	{
+		"id": 4,
+		"title": "The Importance of Mental Health in Children",
+		"description": "Discover the role of mental health in children and how to support their well-being.",
+		"published": "August 20, 2025",
+		"author": "Dr. Michael Patel",
+		"image": "/images/post-image-4.jpg",
+		"slug": "the-importance-of-mental-health-in-children"
+	},
+	{
+		"id": 5,
+		"title": "The Benefits of Regular Exercise for Children",
+		"description": "Explore the physical and mental health benefits of regular exercise for children, from early on.",
+		"published": "September 5, 2025",
+		"author": "Dr. Olivia Thompson",
+		"image": "/images/post-image-5.jpg",
+		"slug": "the-benefits-of-regular-exercise-for-children"
+	},
+	{
+		"id": 6,
+		"title": "The Importance of Food for Children's Health",
+		"description": "Learn about the role of food in children's development and how to support a balanced diet.",
+		"published": "October 10, 2025",
+		"author": "Dr. Daniel Lee",
+		"image": "/images/post-image-6.jpg",
+		"slug": "the-importance-of-food-for-childrens-health"
+	}
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "title": "General Checkups",
+        "description": "Routine exams to keep your health on track.",
+        "image": "/images/medical-checkup.png",
+        "delay": 400
+    },
+    {
+        "title": "Women's Health",
+        "description": "Confidential and supportive women's wellness services.",
+        "image": "/images/pregnant.png",
+        "delay": 600
+    },
+    {
+        "title": "Chronic Illness Management",
+        "description": "Ongoing care plans for your unique treatment needs.",
+        "image": "/images/health.png",
+        "delay": 800
+    },
+    {
+        "title": "On-Site Diagnostics",
+        "description": "Quick lab results with cutting-edge modern tools.",
+        "image": "/images/treatment.png",
+        "delay": 1000
+    },
+    {
+        "title": "Dermatology Care",
+        "description": "Our dermatologists help restore skin health with skincare solutions.",
+        "image": "/images/skincare.png",
+        "delay": 1800
+    },
+    {
+        "title": "Elderly Care & Geriatrics",
+        "description": "We care about senior citizens, also checks mental well-being.",
+        "image": "/images/old-woman.png",
+        "delay": 1600
+    },
+    {
+        "title": "Minor Surgical Procedures",
+        "description": "We perform minor surgeries with great care and precision.",
+        "image": "/images/Mask.png",
+        "delay": 1400
+    },
+    {
+        "title": "Mental Health Counseling",
+        "description": "Confidential support for anxiety, stress, and emotional challenges.",
+        "image": "/images/mental-health.png",
+        "delay": 1200
+    },
+    {
+        "title": "On-Site Diagnostics",
+        "description": "Quick lab results with cutting-edge modern tools.",
+        "image": "/images/treatment.png",
+        "delay": 400
+    },
+    {
+        "title": "Dermatology Care",
+        "description": "Our dermatologists help restore skin health with skincare solutions.",
+        "image": "/images/skincare.png",
+        "delay": 600
+    },
+    {
+        "title": "Elderly Care & Geriatrics",
+        "description": "We care about senior citizens, also checks mental well-being.",
+        "image": "/images/old-woman.png",
+        "delay": 800
+    },
+    {
+        "title": "Chronic Illness Management",
+        "description": "Ongoing care plans for your unique treatment needs.",
+        "image": "/images/health.png",
+        "delay": 1000
+    }
+]

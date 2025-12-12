@@ -1,0 +1,364 @@
+@import "tailwindcss";
+
+@theme {
+    /* Global Font */
+    --font-primary: "Instrument Sans", sans-serif;
+    --font-secondary: "Work Sans", sans-serif;
+    /* Global Colors */
+    --color-primary: #CFFF92;
+    --color-dark-green: #0F1901;
+    --color-darkgray: #555F4A;
+    --color-light-green: #E9EBE0;
+    --color-off-white: #FDFDFC;
+    
+    
+    /* Background image with gradient */
+    --background-image-hero: linear-gradient(100deg,rgba(14, 25, 1, 0.7) 0%, rgba(14, 25, 1, 0.7) 100%),url(../assets/images/hero_bg.jpg);
+    --background-image-cta-1: linear-gradient(0deg,rgba(253, 253, 252, 0.85) 0%, rgba(253, 253, 252, 0.85) 100%),url(../assets/images/dotted-bg.png);
+    --background-image-cta-2: linear-gradient(100deg,rgba(14, 25, 1, 0.9) 0%, rgba(14, 25, 1, 0.1) 100%),url(../assets/images/CTA-2-img.jpg);
+    --background-image-testimonial: linear-gradient(100deg,rgba(14, 25, 1, 0.7) 0%, rgba(14, 25, 1, 0.7) 100%),url(../assets/images/testimonial_bg.jpg);
+
+    /* Font Size */
+    --text-42: 2.625rem;
+    --text-42--line-height: 1.2;
+    --text-64: 4rem;
+    --text-64--line-height: 1.2;
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth text-sm xl:text-base;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-dark-green capitalize font-primary font-semibold transition-all duration-600;
+    }
+	h3{
+		@apply text-2xl;
+	}
+	h4{
+		@apply text-xl leading-[1];
+	}
+    p,span,label,a,li {
+        @apply font-secondary text-lg text-darkgray mb-0 transition-all duration-600;
+    }
+    
+    ::selection {
+        @apply bg-dark-green text-primary;
+    }
+
+    section {
+        @apply overflow-hidden py-10 md:py-14 xl:py-20;
+    }
+}
+
+@layer components{
+    .container {
+        @apply mx-auto px-6 2xl:px-0 w-full md:!w-[720px] lg:!w-[960px] xl:!w-[1296px] 2xl:!w-[1440px];
+    }
+
+    /* Section header */
+    .d2c_section_header{
+        @apply lg:w-[70%] xl:w-1/2 mb-10 overflow-hidden text-center md:text-left;
+    }
+    .d2c_title{
+        @apply text-3xl md:text-42 leading-[1.1] font-bold;
+    }
+    .d2c_lead_head {
+        @apply text-sm rounded-full border border-light-green px-[18px] py-[10px] inline-flex items-center justify-center leading-[1] font-secondary font-medium mb-7;
+    }
+
+    /* Button */
+    .d2c_btn {
+        @apply font-secondary font-medium text-lg px-7 inline-block py-[14px] text-dark-green transition-all duration-600 capitalize cursor-pointer border border-light-green rounded-full leading-[1];
+    }
+    .d2c_btn_primary {
+        @apply bg-primary hover:bg-transparent border-primary hover:border-light-green;
+    }
+    .d2c_btn_secondary {
+        @apply bg-transparent hover:border-primary hover:bg-primary;
+    }
+
+    /* card */
+    .d2c_card{
+        @apply bg-off-white rounded-xl px-5 py-7 md:p-6 lg:px-6 lg:py-7 2xl:px-7 2xl:py-8 border border-light-green;
+    }
+
+    /* nav css */
+    #navbar{
+        @apply z-40;
+    }
+    .d2c_logo{
+        @apply max-w-[165px] object-contain;
+    }
+    .d2c_navbar{
+        @apply bg-dark-green/50 backdrop-blur-md p-2 border border-light-green/20 rounded-2xl lg:rounded-full;
+    }
+    .d2c_navbar .d2c_btn{
+        @apply px-6 lg:px-6 py-2 lg:py-[14px];
+    }
+    #d2c_nav_link_wrapper .nav_link{
+        @apply text-off-white hover:text-primary inline-block text-base lg:text-lg font-secondary font-medium capitalize py-2 mb-0 transition-all duration-600 leading-[1];
+    }
+    #d2c_nav_link_wrapper .nav_link.active{
+        @apply text-primary;
+    }
+    #mobile-nav-links .nav_link.active{
+        @apply text-primary;
+    }
+    #d2c_nav_link_wrapper{
+        @apply hidden lg:flex justify-center space-x-4 mx-auto w-[40%] lg:w-[60%];
+    }
+    #mobile-menu-btn{
+        @apply border rounded-md md:rounded-lg bg-dark-green p-1 md:p-2 text-primary border-light-green/20 focus:outline-none transition-all duration-500;
+    }
+    #mobile-menu .nav_link{
+        @apply text-white;
+    }
+    .nav_link_Small{
+        @apply py-1 lg:py-0 capitalize;
+    }
+    /* Update the mobile menu styles */
+    #mobile-menu {
+        @apply fixed top-0 right-[-300px] w-[300px] h-screen bg-dark-green z-50 transition-all duration-500 ease-in-out;
+    }
+    #mobile-menu.show {
+        @apply right-0;
+    }
+    #mobile-menu.hidden {
+        @apply right-[-100%];
+    }
+    #mobile-nav-links {
+        @apply flex flex-col space-y-3 mt-8;
+    }
+    #mobile-nav-links .nav_link {
+        @apply block w-full text-white text-lg font-primary font-semibold capitalize transition-all duration-300;
+    }
+
+    /* Hero section */
+    #d2c_hero{
+        @apply bg-center bg-cover min-h-[600px] md:min-h-[800px] 2xl:min-h-[900px] flex items-center;
+    }
+    .d2c_hero_title,
+    .d2c_hero_title span{
+        @apply text-4xl md:text-6xl lg:text-64 xl:text-[52px] 2xl:text-64 text-off-white xl:leading-[1.1];
+    }
+    .d2c_hero_title span{
+        @apply text-primary;
+    }
+    .d2c_hero_card{
+        @apply p-6 bg-dark-green/50 backdrop-blur-md border-light-green/20;
+    }
+    .d2c_hero_image_card{
+        @apply h-full rounded-xl overflow-hidden relative border border-light-green/20;
+    }
+    .d2c_hero_image_card img{
+        @apply w-full h-full object-cover;
+    }
+    .d2c_hero_card h4{
+        @apply xl:text-lg 2xl:text-xl;
+    }
+
+    /* Services Card */
+    .d2c_services_card{
+        @apply text-center md:text-left space-y-3 md:space-y-4;
+    }
+    .d2c_services_card p{
+        @apply text-base;
+    }
+    .d2c_services_icon{
+        @apply w-16 h-16 mx-auto md:mx-0 rounded-lg border border-light-green p-2 grid place-items-center;
+    }
+    .d2c_services_title{
+        @apply group-hover:text-darkgray transition-all duration-600;
+    }
+
+    /* Testimonial section */
+    .d2c_client_image{
+        @apply block w-20 h-20 rounded-full border border-light-green/20 mx-auto;
+    }
+
+    /* Contact section */
+    .form-control{
+        @apply border border-light-green bg-transparent text-dark-green font-secondary font-normal text-lg w-full py-3 px-6 rounded-lg focus:outline-none placeholder:text-darkgray;
+    }
+    .form-label{
+        @apply font-primary text-xl font-semibold text-dark-green block mb-4 capitalize;
+    }
+
+    /* Blog section */
+    .d2c_post_image_wrapper{
+        @apply h-[200px] lg:h-[300px] xl:h-[400px] overflow-hidden rounded-2xl;
+    }
+    .d2c_post_image_wrapper img{
+        @apply w-full h-full object-cover group-hover:scale-105 transition-all duration-600;
+    }
+    .d2c_blog_description{
+        @apply line-clamp-2 overflow-hidden text-ellipsis;
+    }
+
+    /* Blog Details Page */
+    table th,table td{
+        @apply text-base md:text-lg lg:text-xl capitalize py-3 md:py-6 text-left font-primary;
+    }
+    .d2c_services_pricing th{
+        @apply text-dark-green;
+    }
+    .d2c_services_pricing td{
+        @apply text-darkgray;
+    }
+    .d2c_services_pricing tbody tr td:nth-child(2) {
+        @apply font-secondary px-4;
+    }
+    .d2c_services_pricing tbody tr td:nth-child(1),
+    .d2c_services_pricing tbody tr td:nth-child(3) {
+        @apply font-semibold;
+    }
+
+    /* Footer */
+    .d2c_footer_content ul li a,
+    .d2c_footer_content p{
+        @apply text-darkgray hover:text-dark-green text-lg font-secondary font-normal;
+    }
+    .d2c_footer_content ul{
+        @apply flex flex-col space-y-2;
+    }
+    .d2c_footer_content ul li a{
+        @apply capitalize;
+    }
+    .d2c_footer_title{
+        @apply mb-4 md:mb-6 mt-4 md:mt-0 text-[22px];
+    }
+    /* Copyright */
+    .d2c_copyright{
+        @apply py-5 border-t border-darkgray/10 text-center;
+    }
+}
+
+@layer utilities {
+      
+    .text-42 {
+        font-size: var(--text-42);
+        line-height: var(--text-42--line-height);
+    }
+    .text-64 {
+        font-size: var(--text-64);
+        line-height: var(--text-64--line-height);
+    }
+    .text-dark-green {
+        color: var(--color-dark-green);
+    }
+    .text-darkgray {
+        color: var(--color-darkgray);
+    }
+    .bg-primary {
+        background-color: var(--color-primary);
+    }
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    /* CTA arrow animation */
+    .d2c_arrow_left {
+        opacity: 0;
+        transform: scale(0.6) rotate(-180deg);
+        transition: all 0.6s ease-out;
+    }
+        
+    .d2c_arrow_left.animate {
+        animation: arrowLeft 1.2s ease-out;
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+        
+    @keyframes arrowLeft {
+        0% {
+            opacity: 0;
+            transform: scale(0.6) rotate(-180deg);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+    }
+    /* Right */
+    .d2c_arrow_right {
+        opacity: 0;
+        transform: scale(0.6) rotate(80deg);
+        transition: all 0.6s ease-out;
+    }
+        
+    .d2c_arrow_right.animate {
+        animation: arrowRight 1.2s ease-out;
+        opacity: 1;
+        transform: scale(1) rotate(180deg);
+    }
+        
+    @keyframes arrowRight {
+        0% {
+            opacity: 0;
+            transform: scale(0.6) rotate(80deg);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) rotate(180deg);
+        }
+    }
+
+    /* Animation CSS */
+    @keyframes fadeSlideUp {
+        0% {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    [data-aos="fade-slide-up"] {
+        opacity: 0;
+        transform: translateY(40px);
+        transition-property: opacity, transform;
+    }
+    [data-aos="fade-slide-up"].aos-animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Gallery section animation */
+	.fade-in {
+        animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Preloader CSS */
+    .loading svg polyline {
+        fill: none;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+      
+    .loading svg polyline#back {
+        stroke: var(--color-darkgray);
+    }
+    
+    .loading svg polyline#front {
+        stroke: var(--color-primary);
+        stroke-dasharray: 48, 144;
+        stroke-dashoffset: 192;
+        animation: dash_682 1.4s linear infinite;
+    }
+    
+    @keyframes dash_682 {
+        72.5% {
+            opacity: 0;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+}

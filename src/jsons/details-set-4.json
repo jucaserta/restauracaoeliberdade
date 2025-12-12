@@ -1,0 +1,21 @@
+{
+  "title": "A Clinic That Understands Everyday Needs",
+  "description": "Our clinic brings comfort, reliability, and care together, moment of patients walk in. We believe healthcare should feel personal and reassuring. they're greeted by a calming environment.",
+  "details": [
+    {
+      "subtitle": "Easy Rescheduling Options",
+      "description": "Change or cancel your appointment with just a few steps.",
+      "delay": 600
+    },
+    {
+      "subtitle": "Always-On Support Line",
+      "description": "Have a question? Reach our clinic team anytime via chat, call, or email.",
+      "delay": 800
+    },
+    {
+      "subtitle": "Fast Lab Result Delivery",
+      "description": "Our secure system ensures your medical information remains private, while giving you real-time access to reports, updates, and next-step guidance",
+      "delay": 1000
+    }
+  ]
+}

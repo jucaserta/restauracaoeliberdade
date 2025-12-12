@@ -1,0 +1,26 @@
+{
+  "title": "Compassionate Doctor-Patient Care",
+  "description": "Receive your diagnostic results directly on your phone, any delays or extra steps. Our secure system ensures your health information remains private.",
+  "details": [
+    {
+      "subtitle": "Real-Time Notifications",
+      "description": "Get instant alerts when your reports are ready.",
+      "delay": 600
+    },
+    {
+      "subtitle": "Encrypted Delivery",
+      "description": "Your health data is protected with HIPAA-compliant security.",
+      "delay": 800
+    },
+    {
+      "subtitle": "Accessible Anywhere",
+      "description": "Review results anytime, from home or on the go.",
+      "delay": 1000
+    },
+    {
+      "subtitle": "Automatic Record Updates",
+      "description": "Your medical history syncs securely in the system.",
+      "delay": 1200
+    }
+  ]
+}

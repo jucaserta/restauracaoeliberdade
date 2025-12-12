@@ -1,0 +1,230 @@
+---
+import blogs from "../../jsons/blogs.json";
+import ServicesPricing from "../../jsons/services-pricing.json";
+import BlogCard from "../../components/shared/blog-card";
+import SectionHeader from "../../components/shared/section-header";
+import Layout from "../../layouts/Layout.astro";
+
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+// Dynamic route slug
+const { slug } = Astro.params;
+
+// Find the blog post
+const blog = blogs.find((item) => item.slug === slug);
+if (!blog) {
+    throw new Error("Blog not found");
+}
+
+// Shuffle function
+function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }0
+    return arr;
+}
+
+const latestPosts = blogs.filter((item) => item.slug !== slug);
+const randomPosts = shuffleArray(latestPosts).slice(0, 2);
+
+// Static paths for Astro to pre-render all blog pages
+export async function getStaticPaths() {
+    return blogs.map((post) => ({
+        params: { slug: post.slug },
+        props: {},
+    }));
+}
+---
+
+<Layout>
+    <section>
+        <div class="container">
+            <div class="space-y-6 pt-14 xl:pt-20 2xl:pt-24">
+                <!-- Feature Image -->
+                <div class="mb-10 lg:mb-20">
+                    <img
+                        src={blog.image}
+                        alt={blog.title}
+                        class="rounded-[18px] w-full max-h-[700px] object-cover"
+                    />
+                </div>
+
+                <!-- Title -->
+                <h2 class="d2c_title">{blog.title}</h2>
+
+                <!-- Author & Meta -->
+                <div>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                        <div class="space-y-1">
+                            <h4 class="text-darkgray">
+                                Author: <span class="font-normal"
+                                    >{blog.author}</span
+                                >
+                            </h4>
+                        </div>
+                        <div class="space-y-1 md:text-right">
+                            <h4 class="text-darkgray">
+                                Estimated Reading Time: <span
+                                    class="font-normal">4 min</span
+                                >
+                            </h4>
+                        </div>
+                    </div>
+                    <h4 class="text-darkgray">
+                        Published: <span class="font-normal"
+                            >{blog.published}</span
+                        >
+                    </h4>
+                </div>
+
+                <!-- Paragraph Intro -->
+                <p>{blog.description}</p>
+
+                <div class="space-y-1">
+                    <h4>Persistent Joint Pain</h4>
+                    <p>
+                        If you've been experiencing localized joint pain for
+                        weeks, even at rest, it's time to get checked...
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <h4>Difficulty Climbing Stairs or Walking</h4>
+                    <p>
+                        Reduced mobility, especially in the hips or knees,
+                        indicates potential joint degeneration...
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <h4>Limited Range of Motion</h4>
+                    <p>
+                        Struggling to fully extend or rotate your joints? A loss
+                        of flexibility could point to ligament injuries...
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <h4>Swelling and Tenderness</h4>
+                    <p>
+                        Any unexplained inflammation around the joints that
+                        doesn't subside with rest or home remedies...
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <h4>Joint Instability or “Giving Out”</h4>
+                    <p>
+                        If your knee or shoulder feels unstable — especially
+                        during movement — this could be a sign of ligament or
+                        meniscus damage...
+                    </p>
+                </div>
+
+                <!-- Quote -->
+                <div class="space-y-1">
+                    <h3>
+                        Early diagnosis and treatment can prevent long-term
+                        damage. Don't wait until pain becomes your normal.
+                    </h3>
+                    <p>- Dr. Nusrat Jahan</p>
+                </div>
+
+                <!-- Tip -->
+                <div class="space-y-1">
+                    <h4>Tip:</h4>
+                    <p>
+                        Keep a daily journal of symptoms. It helps doctors track
+                        patterns and give more accurate diagnoses.
+                    </p>
+                </div>
+
+                <!-- Tags -->
+                <div class="space-y-1">
+                    <h4>Tags:</h4>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <a href="#">#Orthopaedics</a>
+                        <a href="#">#JointCare</a>
+                        <a href="#">#HealthTips</a>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="space-y-1 grid md:grid-cols-12">
+                    <div class="col-span-12 md:col-span-8">
+                        <h4>Think you might be showing these signs?</h4>
+                        <p>Don't wait—book an orthopedic consultation today.</p>
+                    </div>
+                    <div
+                        class="flex gap-3 justify-between md:justify-end mt-5 md:mt-0 col-span-12 md:col-span-4 w-full"
+                    >
+                        <a
+                            class="w-10 h-10 rounded-lg bg-off-white hover:bg-dark-green hover:text-off-white border border-light-green grid place-items-center"
+                        >
+                            <FaArrowLeft />
+                        </a>
+                        <a
+                            class="w-10 h-10 rounded-lg bg-off-white hover:bg-dark-green hover:text-off-white border border-light-green grid place-items-center"
+                        >
+                            <FaArrowRight />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pricing Table -->
+                <h2 class="d2c_title my-12">
+                    Transparent Pricing for Common Orthopaedic Services
+                </h2>
+                <div
+                    class="overflow-x-auto d2c_card bg-off-white px-14 d2c_services_pricing"
+                >
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead>
+                            <tr>
+                                <th class="min-w-[250px]">Service</th>
+                                <th class="min-w-[250px]">Description</th>
+                                <th class="min-w-[200px]">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-light-green">
+                            {
+                                ServicesPricing.map((item) => (
+                                    <tr>
+                                        <td>{item.title}</td>
+                                        <td>{item.description}</td>
+                                        <td>{item.price}</td>
+                                    </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Final CTA -->
+                <div class="mt-10">
+                    <a href="/contact" class="d2c_btn d2c_btn_primary">
+                        Contact a Specialist
+                    </a>
+                </div>
+            </div>
+
+            <!-- Related Blogs -->
+            <div class="pt-20">
+                <SectionHeader
+                    heading="Latest Posts"
+                    class="text-center mx-auto"
+                />
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {
+                        randomPosts.map((post, i) => (
+                            <BlogCard
+                                {...post}
+                                delay={
+                                    i === 0 ? "400" : i === 1 ? "600" : "800"
+                                }
+                            />
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

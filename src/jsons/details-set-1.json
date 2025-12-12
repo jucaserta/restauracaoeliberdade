@@ -1,0 +1,26 @@
+{
+  "title": "A Modern, Comfort-Focused Clinic — Where Innovation Meets Patient Care",
+  "description": "It's a wellness space. Every aspect of our facility is designed with comfort, privacy, and hygiene in mind.",
+  "details": [
+    {
+      "subtitle": "Digital Appointment Scheduling & Records",
+      "description": "Easily book, track, and access your health history online.",
+      "delay": 600
+    },
+    {
+      "subtitle": "Accessible Spaces for All Patients",
+      "description": "Our clinic is built for comfort and access.",
+      "delay": 700
+    },
+    {
+      "subtitle": "Family-Friendly Waiting Areas",
+      "description": "Relaxing spaces designed to keep both adults and kids.",
+      "delay": 800
+    },
+    {
+      "subtitle": "Emergency Ready Infrastructure",
+      "description": "We handle urgent care needs with speed and safety.",
+      "delay": 900
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Initial Consultation",
+        "description": "30-minute assessment with a specialist doctor",
+        "price": "Starting From $29"
+    },
+    {
+        "title": "Follow-Up Visit",
+        "description": "Short session to review progress",
+        "price": "Starting From $79"
+    },
+    {
+        "title": "Digital X-Ray (One Region)",
+        "description": "Instant imaging with report",
+        "price": "Starting From $129"
+    },
+    {
+        "title": "Physiotherapy Session (45 mins)",
+        "description": "Guided rehab session with trained therapist",
+        "price": "Starting From $159"
+    },
+    {
+        "title": "Joint Pain Injection Therapy",
+        "description": "Pain relief via localized injection",
+        "price": "Starting From $219"
+    },
+    {
+        "title": "Minor Surgical Procedure (Outpatient)",
+        "description": "Small surgeries under local anesthesia",
+        "price": "Starting From $249"
+    }
+]

@@ -1,0 +1,42 @@
+---
+---
+
+<div id="preloader" class="fixed inset-0 bg-dark-green flex items-center justify-center z-[9999] transition-opacity duration-800">
+  <div class="loading">
+    <svg width="64" height="48" viewBox="0 0 64 48" class="block">
+      <polyline
+        points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24"
+        id="back"
+      ></polyline>
+      <polyline
+        points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24"
+        id="front"
+      ></polyline>
+    </svg>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const preloader = document.getElementById("preloader");
+    if (!preloader) return;
+
+    // Show preloader
+    preloader.style.opacity = "1";
+    preloader.style.display = "flex";
+
+    // Fade out after short delay
+    setTimeout(() => {
+      preloader.style.transition = "opacity 0.8s ease";
+      preloader.style.opacity = "0";
+
+      // Hide completely after fade
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 800);
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 200);
+  });
+</script>

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Real-Time Health Monitoring",
+    "desc": "Advanced in-clinic tools monitor vitals and health signs in real-time to ensure accurate diagnosis and response.",
+    "img": "/images/features_image_1.jpg",
+    "delay": 400
+  },
+  {
+    "title": "Instant Digital Check-In",
+    "desc": "Instantly sync with electronic records for streamlined data logging and real-time analytics.",
+    "img": "/images/features_image_2.jpg",
+    "delay": 700
+  },
+  {
+    "title": "Connected Care Records",
+    "desc": "Your medical history is securely stored and instantly accessible for doctors, ensuring continuous, informed care.",
+    "img": "/images/features_image_3.jpg",
+    "delay": 900
+  }
+]
