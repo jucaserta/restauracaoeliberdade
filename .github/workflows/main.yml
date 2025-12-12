@@ -24,7 +24,7 @@ jobs:
           ssh-keyscan -H SEU_HOST >> ~/.ssh/known_hosts
 
       - name: Deploy to CyberPanel
-        uses: burnett01/rsync-deployments@v7
+        uses: burnett01/rsync-deployments@v5
         with:
           switches: -avz --delete
           path: dist/
