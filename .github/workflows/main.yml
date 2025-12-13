@@ -1,3 +1,4 @@
       - name: Test SSH connection
         run: |
+          echo "Testing SSH connection to the server"
           ssh -vvv -o StrictHostKeyChecking=yes resta2727@5.161.192.127 "whoami && hostname && pwd"
