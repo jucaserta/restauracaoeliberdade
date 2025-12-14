@@ -2,6 +2,9 @@ backend:
   name: github
   repo: jucaserta/restauracaoeliberdade
   branch: main
+  site_domain: restauracaoeliberdade.com.br
+  base_url: https://restauracaoeliberdade.com.br
+  auth_endpoint: /api/auth
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
