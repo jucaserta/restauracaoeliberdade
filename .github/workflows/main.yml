@@ -1,15 +1,16 @@
-name: Build + Deploy Medureon
+name: Build + Deploy Site (CyberPanel)
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -18,7 +19,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build site
         run: npm run build
@@ -39,5 +40,13 @@ jobs:
       - name: Deploy to CyberPanel
         run: |
           rsync -az --delete \
-            -e "ssh" \
-            dist/ resta2727@5.161.192.127:/home/restauracaoeliberdade.com.br/public_html/
+            dist/ \
+            resta2727@5.161.192.127:/home/restauracaoeliberdade.com.br/public_html/
+
+      - name: Fix permissions (post deploy)
+        run: |
+          ssh resta2727@5.161.192.127 '
+            chmod 711 /home/restauracaoeliberdade.com.br &&
+            find /home/restauracaoeliberdade.com.br/public_html -type d -exec chmod 755 {} \; &&
+            find /home/restauracaoeliberdade.com.br/public_html -type f -exec chmod 644 {} \;
+          '
