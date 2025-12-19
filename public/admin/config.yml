@@ -8,4 +8,14 @@ backend:
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
-collections: []
+collections:
+  - name: "pages"
+    label: "Páginas"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
