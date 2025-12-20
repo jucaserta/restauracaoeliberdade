@@ -10,8 +10,7 @@
     --color-darkgray: #555F4A;
     --color-light-green: #E9EBE0;
     --color-off-white: #FDFDFC;
-    
-    
+
     /* Background image with gradient */
     --background-image-hero: linear-gradient(100deg,rgba(14, 25, 1, 0.7) 0%, rgba(14, 25, 1, 0.7) 100%),url(../assets/images/hero_bg.jpg);
     --background-image-cta-1: linear-gradient(0deg,rgba(253, 253, 252, 0.85) 0%, rgba(253, 253, 252, 0.85) 100%),url(../assets/images/dotted-bg.png);
@@ -30,18 +29,18 @@
         @apply scroll-smooth text-sm xl:text-base;
     }
     h1, h2, h3, h4, h5, h6 {
-        @apply text-dark-green capitalize font-primary font-semibold transition-all duration-600;
+        @apply text-dark-green font-primary font-semibold transition-all duration-600;
     }
-	h3{
-		@apply text-2xl;
-	}
-	h4{
-		@apply text-xl leading-[1];
-	}
+    h3{
+        @apply text-2xl;
+    }
+    h4{
+        @apply text-xl leading-[1];
+    }
     p,span,label,a,li {
         @apply font-secondary text-lg text-darkgray mb-0 transition-all duration-600;
     }
-    
+
     ::selection {
         @apply bg-dark-green text-primary;
     }
@@ -69,7 +68,7 @@
 
     /* Button */
     .d2c_btn {
-        @apply font-secondary font-medium text-lg px-7 inline-block py-[14px] text-dark-green transition-all duration-600 capitalize cursor-pointer border border-light-green rounded-full leading-[1];
+        @apply font-secondary font-medium text-lg px-7 inline-block py-[14px] text-dark-green transition-all duration-600 cursor-pointer border border-light-green rounded-full leading-[1];
     }
     .d2c_btn_primary {
         @apply bg-primary hover:bg-transparent border-primary hover:border-light-green;
@@ -97,7 +96,7 @@
         @apply px-6 lg:px-6 py-2 lg:py-[14px];
     }
     #d2c_nav_link_wrapper .nav_link{
-        @apply text-off-white hover:text-primary inline-block text-base lg:text-lg font-secondary font-medium capitalize py-2 mb-0 transition-all duration-600 leading-[1];
+        @apply text-off-white hover:text-primary inline-block text-base lg:text-lg font-secondary font-medium py-2 mb-0 transition-all duration-600 leading-[1];
     }
     #d2c_nav_link_wrapper .nav_link.active{
         @apply text-primary;
@@ -115,7 +114,7 @@
         @apply text-white;
     }
     .nav_link_Small{
-        @apply py-1 lg:py-0 capitalize;
+        @apply py-1 lg:py-0;
     }
     /* Update the mobile menu styles */
     #mobile-menu {
@@ -131,7 +130,7 @@
         @apply flex flex-col space-y-3 mt-8;
     }
     #mobile-nav-links .nav_link {
-        @apply block w-full text-white text-lg font-primary font-semibold capitalize transition-all duration-300;
+        @apply block w-full text-white text-lg font-primary font-semibold transition-all duration-300;
     }
 
     /* Hero section */
@@ -182,7 +181,7 @@
         @apply border border-light-green bg-transparent text-dark-green font-secondary font-normal text-lg w-full py-3 px-6 rounded-lg focus:outline-none placeholder:text-darkgray;
     }
     .form-label{
-        @apply font-primary text-xl font-semibold text-dark-green block mb-4 capitalize;
+        @apply font-primary text-xl font-semibold text-dark-green block mb-4;
     }
 
     /* Blog section */
@@ -198,7 +197,7 @@
 
     /* Blog Details Page */
     table th,table td{
-        @apply text-base md:text-lg lg:text-xl capitalize py-3 md:py-6 text-left font-primary;
+        @apply text-base md:text-lg lg:text-xl py-3 md:py-6 text-left font-primary;
     }
     .d2c_services_pricing th{
         @apply text-dark-green;
@@ -223,7 +222,7 @@
         @apply flex flex-col space-y-2;
     }
     .d2c_footer_content ul li a{
-        @apply capitalize;
+        @apply;
     }
     .d2c_footer_title{
         @apply mb-4 md:mb-6 mt-4 md:mt-0 text-[22px];
@@ -235,7 +234,7 @@
 }
 
 @layer utilities {
-      
+
     .text-42 {
         font-size: var(--text-42);
         line-height: var(--text-42--line-height);
@@ -263,13 +262,13 @@
         transform: scale(0.6) rotate(-180deg);
         transition: all 0.6s ease-out;
     }
-        
+
     .d2c_arrow_left.animate {
         animation: arrowLeft 1.2s ease-out;
         opacity: 1;
         transform: scale(1) rotate(0deg);
     }
-        
+
     @keyframes arrowLeft {
         0% {
             opacity: 0;
@@ -286,13 +285,13 @@
         transform: scale(0.6) rotate(80deg);
         transition: all 0.6s ease-out;
     }
-        
+
     .d2c_arrow_right.animate {
         animation: arrowRight 1.2s ease-out;
         opacity: 1;
         transform: scale(1) rotate(180deg);
     }
-        
+
     @keyframes arrowRight {
         0% {
             opacity: 0;
@@ -326,7 +325,7 @@
     }
 
     /* Gallery section animation */
-	.fade-in {
+    .fade-in {
         animation: fadeIn 1s ease-in-out;
     }
     @keyframes fadeIn {
@@ -341,18 +340,18 @@
         stroke-linecap: round;
         stroke-linejoin: round;
     }
-      
+
     .loading svg polyline#back {
         stroke: var(--color-darkgray);
     }
-    
+
     .loading svg polyline#front {
         stroke: var(--color-primary);
         stroke-dasharray: 48, 144;
         stroke-dashoffset: 192;
         animation: dash_682 1.4s linear infinite;
     }
-    
+
     @keyframes dash_682 {
         72.5% {
             opacity: 0;
