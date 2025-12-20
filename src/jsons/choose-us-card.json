@@ -1,26 +1,26 @@
 [
   {
-    "title": "Expert Physicians",
-    "description": "Our doctors bring years of experience and a deep commitment to patient-centered care. From initial consultation to follow-ups.",
-    "link": "/about",
+    "title": "Atendimento especializado e humano",
+    "description": "Nossa equipe atua com experiência real, escuta ativa e foco total na recuperação. Aqui você fala direto com quem resolve.",
+    "link": "tel:+550000000000",
     "delay": 400,
     "gridClass": "col-span-12 md:col-span-6 lg:col-span-4",
-    "buttonText": "Explore Now"
+    "buttonText": "Ligue agora"
   },
   {
-    "title": "Advanced Equipment",
-    "description": "From digital imaging to on-site labs, our technology helps detect issues early and ensures accurate treatment decisions.",
-    "link": "/about",
+    "title": "Estrutura preparada para acolher",
+    "description": "Ambiente seguro, discreto e organizado para internação e acompanhamento, respeitando cada etapa do processo.",
+    "link": "https://wa.me/550000000000",
     "delay": 700,
     "gridClass": "col-span-12 md:col-span-6 lg:col-span-4",
-    "buttonText": "Explore Now"
+    "buttonText": "WhatsApp"
   },
   {
-    "title": "Family Treatment Plans",
-    "description": "We create adaptable care plans that fit each family member's unique needs - whether it's women's health, or elderly support.",
-    "link": "/about",
+    "title": "Tratamento individualizado",
+    "description": "Cada caso é avaliado com cuidado. Orientamos a família, explicamos o processo e seguimos com acompanhamento contínuo.",
+    "link": "https://wa.me/550000000000",
     "delay": 1000,
     "gridClass": "col-span-12 lg:col-span-4 xl:col-span-4",
-    "buttonText": "Explore Now"
+    "buttonText": "WhatsApp"
   }
 ]
