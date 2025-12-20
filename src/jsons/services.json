@@ -1,74 +1,50 @@
 [
-    {
-        "title": "General Checkups",
-        "description": "Routine exams to keep your health on track.",
-        "image": "/images/medical-checkup.png",
-        "delay": 400
-    },
-    {
-        "title": "Women's Health",
-        "description": "Confidential and supportive women's wellness services.",
-        "image": "/images/pregnant.png",
-        "delay": 600
-    },
-    {
-        "title": "Chronic Illness Management",
-        "description": "Ongoing care plans for your unique treatment needs.",
-        "image": "/images/health.png",
-        "delay": 800
-    },
-    {
-        "title": "On-Site Diagnostics",
-        "description": "Quick lab results with cutting-edge modern tools.",
-        "image": "/images/treatment.png",
-        "delay": 1000
-    },
-    {
-        "title": "Dermatology Care",
-        "description": "Our dermatologists help restore skin health with skincare solutions.",
-        "image": "/images/skincare.png",
-        "delay": 1800
-    },
-    {
-        "title": "Elderly Care & Geriatrics",
-        "description": "We care about senior citizens, also checks mental well-being.",
-        "image": "/images/old-woman.png",
-        "delay": 1600
-    },
-    {
-        "title": "Minor Surgical Procedures",
-        "description": "We perform minor surgeries with great care and precision.",
-        "image": "/images/Mask.png",
-        "delay": 1400
-    },
-    {
-        "title": "Mental Health Counseling",
-        "description": "Confidential support for anxiety, stress, and emotional challenges.",
-        "image": "/images/mental-health.png",
-        "delay": 1200
-    },
-    {
-        "title": "On-Site Diagnostics",
-        "description": "Quick lab results with cutting-edge modern tools.",
-        "image": "/images/treatment.png",
-        "delay": 400
-    },
-    {
-        "title": "Dermatology Care",
-        "description": "Our dermatologists help restore skin health with skincare solutions.",
-        "image": "/images/skincare.png",
-        "delay": 600
-    },
-    {
-        "title": "Elderly Care & Geriatrics",
-        "description": "We care about senior citizens, also checks mental well-being.",
-        "image": "/images/old-woman.png",
-        "delay": 800
-    },
-    {
-        "title": "Chronic Illness Management",
-        "description": "Ongoing care plans for your unique treatment needs.",
-        "image": "/images/health.png",
-        "delay": 1000
-    }
+  {
+    "title": "Internação e acolhimento",
+    "description": "Atendimento discreto e organizado para iniciar o tratamento com segurança e orientação clara.",
+    "image": "/images/medical-checkup.png",
+    "delay": 400
+  },
+  {
+    "title": "Orientação para a família",
+    "description": "A gente explica o processo, tira dúvidas e mantém a família informada durante cada etapa.",
+    "image": "/images/pregnant.png",
+    "delay": 600
+  },
+  {
+    "title": "Avaliação do caso",
+    "description": "Entendemos a situação, definimos o melhor caminho e indicamos o tipo de atendimento ideal.",
+    "image": "/images/health.png",
+    "delay": 800
+  },
+  {
+    "title": "Remoção e encaminhamento",
+    "description": "Quando precisa, ajudamos no encaminhamento com agilidade e cuidado para iniciar o quanto antes.",
+    "image": "/images/treatment.png",
+    "delay": 1000
+  },
+  {
+    "title": "Acompanhamento contínuo",
+    "description": "Suporte durante o processo, com foco em evolução e ajustes no plano de tratamento.",
+    "image": "/images/skincare.png",
+    "delay": 1200
+  },
+  {
+    "title": "Atendimento humanizado",
+    "description": "Escuta ativa e respeito. Você fala direto com quem resolve, sem julgamentos e sem enrolação.",
+    "image": "/images/old-woman.png",
+    "delay": 1400
+  },
+  {
+    "title": "Plano individualizado",
+    "description": "Cada pessoa tem uma história. A gente adapta a condução do tratamento ao perfil e necessidade.",
+    "image": "/images/Mask.png",
+    "delay": 1600
+  },
+  {
+    "title": "Suporte emocional",
+    "description": "Acolhimento e direcionamento para fortalecer a motivação e a continuidade do processo.",
+    "image": "/images/mental-health.png",
+    "delay": 1800
+  }
 ]
