@@ -9,11 +9,41 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "pages"
-    label: "Páginas"
-    folder: "src/pages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+  - name: "theme"
+    label: "Tema (Astro)"
+    files:
+      - label: "Home (src/pages/index.astro)"
+        name: "home"
+        file: "src/pages/index.astro"
+        fields:
+          - label: "Código"
+            name: "body"
+            widget: "code"
+            default_language: "astro"
+
+      - label: "Layout Base (src/layouts/Base.astro)"
+        name: "base_layout"
+        file: "src/layouts/Base.astro"
+        fields:
+          - label: "Código"
+            name: "body"
+            widget: "code"
+            default_language: "astro"
+
+      - label: "Header (src/components/Header.astro)"
+        name: "header"
+        file: "src/components/Header.astro"
+        fields:
+          - label: "Código"
+            name: "body"
+            widget: "code"
+            default_language: "astro"
+
+      - label: "Footer (src/components/Footer.astro)"
+        name: "footer"
+        file: "src/components/Footer.astro"
+        fields:
+          - label: "Código"
+            name: "body"
+            widget: "code"
+            default_language: "astro"
