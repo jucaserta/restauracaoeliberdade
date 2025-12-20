@@ -222,8 +222,8 @@
         @apply flex flex-col space-y-2;
     }
     .d2c_footer_content ul li a{
-        @apply;
-    }
+    @apply hover:text-dark-green;
+}
     .d2c_footer_title{
         @apply mb-4 md:mb-6 mt-4 md:mt-0 text-[22px];
     }
@@ -361,3 +361,4 @@
         }
     }
 }
+
