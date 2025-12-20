@@ -1,19 +1,19 @@
 [
   {
-    "title": "Real-Time Health Monitoring",
-    "desc": "Advanced in-clinic tools monitor vitals and health signs in real-time to ensure accurate diagnosis and response.",
+    "title": "Acompanhamento em tempo real",
+    "desc": "Nossa equipe monitora sinais e evolução durante o processo, com atenção e resposta rápida quando precisa.",
     "img": "/images/features_image_1.jpg",
     "delay": 400
   },
   {
-    "title": "Instant Digital Check-In",
-    "desc": "Instantly sync with electronic records for streamlined data logging and real-time analytics.",
+    "title": "Triagem rápida e sem enrolação",
+    "desc": "Você chama, a gente entende o caso e orienta o melhor caminho para iniciar o atendimento o quanto antes.",
     "img": "/images/features_image_2.jpg",
     "delay": 700
   },
   {
-    "title": "Connected Care Records",
-    "desc": "Your medical history is securely stored and instantly accessible for doctors, ensuring continuous, informed care.",
+    "title": "Acompanhamento da família",
+    "desc": "A família recebe orientação e atualizações do andamento, com clareza e discrição em cada etapa.",
     "img": "/images/features_image_3.jpg",
     "delay": 900
   }
