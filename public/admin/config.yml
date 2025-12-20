@@ -15,6 +15,7 @@ collections:
       - label: "Home (src/pages/index.astro)"
         name: "home"
         file: "src/pages/index.astro"
+        format: "raw"
         fields:
           - label: "Código"
             name: "body"
@@ -24,6 +25,7 @@ collections:
       - label: "Layout Base (src/layouts/Base.astro)"
         name: "base_layout"
         file: "src/layouts/Base.astro"
+        format: "raw"
         fields:
           - label: "Código"
             name: "body"
@@ -33,6 +35,7 @@ collections:
       - label: "Header (src/components/Header.astro)"
         name: "header"
         file: "src/components/Header.astro"
+        format: "raw"
         fields:
           - label: "Código"
             name: "body"
@@ -42,6 +45,7 @@ collections:
       - label: "Footer (src/components/Footer.astro)"
         name: "footer"
         file: "src/components/Footer.astro"
+        format: "raw"
         fields:
           - label: "Código"
             name: "body"
