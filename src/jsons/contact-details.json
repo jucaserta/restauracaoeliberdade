@@ -1,16 +1,16 @@
 [
   {
-    "title": "Call Support",
-    "value": "+1 (800) 123-4567",
-    "link": "tel:18001234567"
+    "title": "Ligue agora",
+    "value": "(11) 98684-3656",
+    "link": "tel:+5511986843656"
   },
   {
-    "title": "Email Address",
-    "value": "info@medureon.com",
-    "link": "mailto:info@medureon.com"
+    "title": "WhatsApp",
+    "value": "(11) 98684-3656",
+    "link": "https://wa.me/5511986843656?text=Oi%21%20Quero%20falar%20com%20a%20equipe."
   },
   {
-    "title": "Location Details",
-    "value": "2118 Thornridge Cir. Syracuse, Conn ecticut 35624"
+    "title": "Localização",
+    "value": "Atendimento discreto. Informe seu bairro/cidade no WhatsApp e a equipe orienta o melhor caminho."
   }
 ]
