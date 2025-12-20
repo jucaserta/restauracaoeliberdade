@@ -71,8 +71,8 @@
         @apply font-secondary font-medium text-lg px-7 inline-block py-[14px] text-dark-green transition-all duration-600 cursor-pointer border border-light-green rounded-full leading-[1];
     }
     .d2c_btn_primary {
-        @apply bg-primary hover:bg-transparent border-primary hover:border-light-green;
-    }
+    @apply bg-primary border-primary hover:bg-primary hover:border-primary;
+}
     .d2c_btn_secondary {
         @apply bg-transparent hover:border-primary hover:bg-primary;
     }
@@ -361,4 +361,5 @@
         }
     }
 }
+
 
