@@ -1,98 +1,27 @@
-import React, { useEffect, useMemo, useState } from 'react'
-
-// usa as imagens que já existem no tema (troca depois)
-import Slide1 from '../../../assets/images/hero_image_1.jpg'
-import Slide2 from '../../../assets/images/hero_image_2.jpg'
-import Slide3 from '../../../assets/images/about_img.jpg'
-
-function MiniSlider({ images, interval = 4500 }) {
-  const safeImages = useMemo(() => images?.filter(Boolean) ?? [], [images])
-  const [idx, setIdx] = useState(0)
-
-  useEffect(() => {
-    if (safeImages.length <= 1) return
-    const t = setInterval(() => setIdx(v => (v + 1) % safeImages.length), interval)
-    return () => clearInterval(t)
-  }, [safeImages.length, interval])
-
-  if (!safeImages.length) return null
-
-  return (
-    <div className="relative overflow-hidden rounded-xl border border-light-green">
-      <img
-        src={safeImages[idx].src}
-        alt="Foto da clínica"
-        className="w-full h-[220px] md:h-[260px] object-cover"
-        width={900}
-        height={520}
-      />
-      <div className="absolute inset-0 bg-[#0E1901]/20" />
-
-      {safeImages.length > 1 && (
-        <>
-          <button
-            type="button"
-            onClick={() => setIdx(v => (v - 1 + safeImages.length) % safeImages.length)}
-            className="absolute left-3 top-1/2 -translate-y-1/2 bg-dark-green/60 backdrop-blur-md text-off-white w-10 h-10 rounded-full border border-light-green/20"
-            aria-label="Anterior"
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            onClick={() => setIdx(v => (v + 1) % safeImages.length)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 bg-dark-green/60 backdrop-blur-md text-off-white w-10 h-10 rounded-full border border-light-green/20"
-            aria-label="Próxima"
-          >
-            ›
-          </button>
-
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-            {safeImages.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setIdx(i)}
-                className={`h-2 w-2 rounded-full border border-light-green/30 ${
-                  i === idx ? 'bg-primary' : 'bg-dark-green/40'
-                }`}
-                aria-label={`Ir para imagem ${i + 1}`}
-              />
-            ))}
-          </div>
-        </>
-      )}
-    </div>
-  )
-}
-
-export default function FeaturesSection({ data }) {
-  return (
-    <section id="d2c_features">
-      <div className="container">
-        <div className="grid grid-cols-12 gap-4 md:gap-6">
-          {/* esquerda continua como está no seu componente */}
-          {/* ... */}
-
-          {/* DIREITA: aqui é o “A Modern…” */}
-          <div className="col-span-12 lg:col-span-6 d2c_card space-y-5">
-            <h3>{data.title}</h3>
-
-            {/* SLIDER NO LUGAR DA DESCRIPTION */}
-            <MiniSlider images={[Slide1, Slide2, Slide3]} />
-
-            {/* lista de detalhes fica embaixo */}
-            <div className="space-y-4">
-              {data.details?.map((item, i) => (
-                <div key={i} data-aos="fade-slide-up" data-aos-delay={item.delay ?? 0}>
-                  <h4 className="!capitalize">{item.subtitle}</h4>
-                  <p className="text-base">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+{
+  "title": "Ambiente seguro, discreto e focado na recuperação",
+  "description": "Estrutura preparada para acolher, com organização e privacidade em cada etapa do processo.",
+  "showSlider": true,
+  "details": [
+    {
+      "subtitle": "Acolhimento e orientação",
+      "description": "Você fala direto com quem resolve. A gente entende o caso e orienta o melhor caminho.",
+      "delay": 600
+    },
+    {
+      "subtitle": "Acompanhamento contínuo",
+      "description": "A família recebe atualização e suporte durante o processo, sem enrolação.",
+      "delay": 700
+    },
+    {
+      "subtitle": "Equipe preparada",
+      "description": "Atendimento humano, escuta ativa e experiência real com foco em resultado.",
+      "delay": 800
+    },
+    {
+      "subtitle": "Agilidade no atendimento",
+      "description": "Contato rápido para tirar dúvidas e iniciar o atendimento o quanto antes.",
+      "delay": 900
+    }
+  ]
 }
