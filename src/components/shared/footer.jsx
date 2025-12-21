@@ -85,7 +85,7 @@ export default function Footer() {
                   <span className="w-10 h-10 rounded-lg border border-light-green grid place-items-center">
                     <FaPhoneAlt />
                   </span>
-                  <span className="font-secondary">{PHONE_DISPLAY}</span>
+                  <span className="font-secondary">Telefone: {PHONE_DISPLAY}</span>
                 </a>
 
                 <a
@@ -97,7 +97,7 @@ export default function Footer() {
                   <span className="w-10 h-10 rounded-lg border border-light-green grid place-items-center">
                     <FaWhatsapp />
                   </span>
-                  <span className="font-secondary">WhatsApp {PHONE_DISPLAY}</span>
+                  <span className="font-secondary">WhatsApp: {PHONE_DISPLAY}</span>
                 </a>
 
                 <div className="pt-2 border-t border-light-green/60">
@@ -120,6 +120,7 @@ export default function Footer() {
     </footer>
   )
 }
+
 
 
 
