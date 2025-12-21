@@ -1,21 +1,38 @@
 {
-  "title": "A Clinic That Understands Everyday Needs",
-  "description": "Our clinic brings comfort, reliability, and care together, moment of patients walk in. We believe healthcare should feel personal and reassuring. they're greeted by a calming environment.",
-  "details": [
-    {
-      "subtitle": "Easy Rescheduling Options",
-      "description": "Change or cancel your appointment with just a few steps.",
-      "delay": 600
-    },
-    {
-      "subtitle": "Always-On Support Line",
-      "description": "Have a question? Reach our clinic team anytime via chat, call, or email.",
-      "delay": 800
-    },
-    {
-      "subtitle": "Fast Lab Result Delivery",
-      "description": "Our secure system ensures your medical information remains private, while giving you real-time access to reports, updates, and next-step guidance",
-      "delay": 1000
+  "unit2": {
+    "title": "Unidade 2",
+    "description": "Fotos reais do ambiente. Estrutura organizada e preparada para receber com discrição e rotina de cuidado.",
+    "slider": {
+      "images": [
+        { "src": "/images/unidades/unidade-2/1.jpeg", "alt": "Unidade 2 - Foto 1" },
+        { "src": "/images/unidades/unidade-2/2.jpeg", "alt": "Unidade 2 - Foto 2" },
+        { "src": "/images/unidades/unidade-2/3.jpeg", "alt": "Unidade 2 - Foto 3" },
+        { "src": "/images/unidades/unidade-2/4.jpeg", "alt": "Unidade 2 - Foto 4" },
+        { "src": "/images/unidades/unidade-2/5.jpeg", "alt": "Unidade 2 - Foto 5" },
+        { "src": "/images/unidades/unidade-2/6.jpeg", "alt": "Unidade 2 - Foto 6" },
+        { "src": "/images/unidades/unidade-2/7.jpeg", "alt": "Unidade 2 - Foto 7" },
+        { "src": "/images/unidades/unidade-2/8.jpeg", "alt": "Unidade 2 - Foto 8" },
+        { "src": "/images/unidades/unidade-2/9.jpeg", "alt": "Unidade 2 - Foto 9" },
+        { "src": "/images/unidades/unidade-2/10.jpeg", "alt": "Unidade 2 - Foto 10" }
+      ]
     }
-  ]
+  },
+  "unit3": {
+    "title": "Unidade 3",
+    "description": "Um segundo ambiente para você comparar. Mesma proposta: segurança, privacidade e estrutura para o processo de recuperação.",
+    "slider": {
+      "images": [
+        { "src": "/images/unidades/unidade-3/1.jpeg", "alt": "Unidade 3 - Foto 1" },
+        { "src": "/images/unidades/unidade-3/2.jpeg", "alt": "Unidade 3 - Foto 2" },
+        { "src": "/images/unidades/unidade-3/3.jpeg", "alt": "Unidade 3 - Foto 3" },
+        { "src": "/images/unidades/unidade-3/4.jpeg", "alt": "Unidade 3 - Foto 4" },
+        { "src": "/images/unidades/unidade-3/5.jpeg", "alt": "Unidade 3 - Foto 5" },
+        { "src": "/images/unidades/unidade-3/6.jpeg", "alt": "Unidade 3 - Foto 6" },
+        { "src": "/images/unidades/unidade-3/7.jpeg", "alt": "Unidade 3 - Foto 7" },
+        { "src": "/images/unidades/unidade-3/8.jpeg", "alt": "Unidade 3 - Foto 8" },
+        { "src": "/images/unidades/unidade-3/9.jpeg", "alt": "Unidade 3 - Foto 9" },
+        { "src": "/images/unidades/unidade-3/10.jpeg", "alt": "Unidade 3 - Foto 10" }
+      ]
+    }
+  }
 }
