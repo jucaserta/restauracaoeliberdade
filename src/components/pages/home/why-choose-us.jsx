@@ -20,12 +20,8 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-12 gap-4 md:gap-6">
           <ChooseCards />
 
-          <div className="col-span-12 lg:col-span-6 xl:col-span-7 d2c_card space-y-4 flex flex-wrap flex-row md:flex-col justify-center md:justify-between">
-            <div
-              className="space-y-2 md:space-y-3 text-center md:text-left"
-              data-aos="fade-slide-up"
-              data-aos-delay="400"
-            >
+          <div className="col-span-12 lg:col-span-6 xl:col-span-7 d2c_card flex flex-col gap-6">
+            <div className="space-y-3 text-center md:text-left" data-aos="fade-slide-up" data-aos-delay="400">
               <h3>Atendimento humano, discreto e focado em resultado</h3>
               <p>
                 Você fala direto com nossa equipe. A gente entende o caso, orienta o melhor caminho e
@@ -66,8 +62,13 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-6 xl:col-span-5 d2c_card space-y-4 flex flex-wrap flex-row md:flex-col justify-center md:justify-between">
-            <div data-aos="fade-slide-up" data-aos-delay="600" className="w-full">
+          <div className="col-span-12 lg:col-span-6 xl:col-span-5 d2c_card flex flex-col gap-4">
+            <div className="text-center md:text-left" data-aos="fade-slide-up" data-aos-delay="400">
+              <h3 className="mb-2">{detailOne?.title || "Unidade 1"}</h3>
+              <p className="text-base md:text-lg">{detailOne?.description || ""}</p>
+            </div>
+
+            <div className="w-full" data-aos="fade-slide-up" data-aos-delay="600">
               <MiniSlider images={detailOne?.slider?.images || []} />
             </div>
           </div>
