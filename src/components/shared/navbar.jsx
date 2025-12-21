@@ -61,9 +61,9 @@ export default function Navbar() {
               <img
                 src={Logo.src}
                 alt="Logo"
-                width={165}
-                height={60}
-                className="d2c_logo max-w-[165px] object-contain"
+                width={220}
+                height={80}
+                className="d2c_logo max-w-[220px] object-contain"
               />
             </button>
 
@@ -196,6 +196,7 @@ export default function Navbar() {
     </header>
   );
 }
+
 
 
 
