@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FooterLogo from "../../assets/images/logo-footer.png";
+import FooterLogo from "../../assets/images/logo/logo-footernovo.png";
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 
 const PHONE_DISPLAY = '(11) 98684-3656'
