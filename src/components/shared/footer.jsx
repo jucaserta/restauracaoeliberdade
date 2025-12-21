@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import FooterLogo from '../../assets/images/logo/footer-logo.png'
+import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 
 const PHONE_DISPLAY = '(11) 98684-3656'
 const PHONE_TEL = '5511986843656'
@@ -11,29 +12,26 @@ export default function Footer() {
   return (
     <footer className="relative bg-off-white border-t border-t-light-green/40">
       <div className="container space-y-6 md:space-y-10 xl:space-y-18 pt-14 lg:pt-20">
-        {/* Grid */}
-        <div className="grid grid-cols-12 gap-4 md:gap-6">
-          {/* Logo & Description */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-5">
-            <div className="space-y-4 d2c_footer_content xl:max-w-[80%] 2xl:max-w-[73%]">
-              <div>
-                <a href="#d2c_hero">
-                  <img
-                    src={FooterLogo.src}
-                    alt="Restauração e Liberdade"
-                    width={210}
-                    height={50}
-                    loading="lazy"
-                  />
-                </a>
-              </div>
+        <div className="grid grid-cols-12 gap-6 md:gap-8">
+          {/* Logo & texto + CTAs */}
+          <div className="col-span-12 lg:col-span-5">
+            <div className="space-y-5 d2c_footer_content xl:max-w-[85%]">
+              <a href="#d2c_hero" className="inline-block">
+                <img
+                  src={FooterLogo.src}
+                  alt="Restauração e Liberdade"
+                  width={210}
+                  height={50}
+                  loading="lazy"
+                />
+              </a>
 
               <p>
                 Atendimento 24h com acolhimento discreto e orientação clara para família e paciente.
                 Você fala com quem resolve e entende os próximos passos sem enrolação.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <div className="flex flex-col sm:flex-row gap-3 pt-1">
                 <a
                   href={`tel:${PHONE_TEL}`}
                   className="d2c_btn d2c_btn_primary hover:text-white hover:border-light-green/20 w-full sm:w-max text-center"
@@ -49,16 +47,19 @@ export default function Footer() {
                 >
                   Falar no WhatsApp
                 </a>
-              </div>
 
-              <p className="text-sm text-darkgray">
-                {PHONE_DISPLAY}
-              </p>
+                <a
+                  href="#d2c_contact"
+                  className="d2c_btn d2c_btn_secondary border-light-green/20 hover:text-dark-green w-full sm:w-max text-center"
+                >
+                  Abrir formulário
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Navegação (âncoras) */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-3 xl:pl-10">
+          {/* Navegação */}
+          <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <div className="d2c_footer_content">
               <h4 className="d2c_footer_title">Navegação</h4>
               <ul>
@@ -71,27 +72,40 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contato rápido */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-2">
+          {/* Contato com ícones + números */}
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="d2c_footer_content">
               <h4 className="d2c_footer_title">Contato</h4>
-              <ul>
-                <li><a href={`tel:${PHONE_TEL}`}>Ligue agora</a></li>
-                <li><a href={WHATSAPP} target="_blank" rel="noreferrer">Falar no WhatsApp</a></li>
-                <li><a href="#d2c_contact">Abrir formulário</a></li>
-              </ul>
-            </div>
-          </div>
 
-          {/* Avisos */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-2 xl:col-span-2">
-            <div className="d2c_footer_content">
-              <h4 className="d2c_footer_title">Informações</h4>
-              <ul>
-                <li><a href="#d2c_contact">Atendimento 24h</a></li>
-                <li><a href="#d2c_choose_us">Privacidade e discrição</a></li>
-                <li><a href="#d2c_services">Orientação para família</a></li>
-              </ul>
+              <div className="rounded-xl border border-light-green bg-white p-5 space-y-4">
+                <a
+                  href={`tel:${PHONE_TEL}`}
+                  className="flex items-center gap-3 text-darkgray hover:text-dark-green"
+                >
+                  <span className="w-10 h-10 rounded-lg border border-light-green grid place-items-center">
+                    <FaPhoneAlt />
+                  </span>
+                  <span className="font-secondary">{PHONE_DISPLAY}</span>
+                </a>
+
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3 text-darkgray hover:text-dark-green"
+                >
+                  <span className="w-10 h-10 rounded-lg border border-light-green grid place-items-center">
+                    <FaWhatsapp />
+                  </span>
+                  <span className="font-secondary">WhatsApp {PHONE_DISPLAY}</span>
+                </a>
+
+                <div className="pt-2 border-t border-light-green/60">
+                  <p className="text-sm text-darkgray">
+                    Atendimento 24h. Resposta rápida.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
