@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "../../assets/images/logo/logo.png";
+import Logo from "../../assets/images/logo/logo-novo.png";
 
 const PHONE_TEL = "5511986843656";
 const WHATSAPP =
@@ -196,5 +196,6 @@ export default function Navbar() {
     </header>
   );
 }
+
 
 
