@@ -4,6 +4,10 @@ import Toast from 'react-hot-toast'
 
 const WHATSAPP = 'https://wa.me/5511986843656'
 
+const UFS = [
+  'AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'
+]
+
 export default function ContactForm() {
   const {
     register,
@@ -18,8 +22,10 @@ export default function ContactForm() {
         `Novo contato pelo site:%0A` +
         `Nome: ${data.name}%0A` +
         `Telefone: ${data.phone}%0A` +
+        `Cidade/UF: ${data.city} - ${data.uf}%0A` +
         `Contato: ${data.profile}%0A` +
         `Urgência: ${data.urgency}%0A` +
+        `Origem: ${data.source}%0A` +
         `Mensagem: ${data.message}`
 
       window.open(`${WHATSAPP}?text=${msg}`, '_blank')
@@ -70,15 +76,49 @@ export default function ContactForm() {
             defaultValue=""
             {...register('profile', { required: true })}
           >
-            <option value="" disabled>
-              Selecione uma opção
-            </option>
+            <option value="" disabled>Selecione</option>
             <option value="Paciente">Paciente</option>
             <option value="Familiar">Familiar</option>
             <option value="Amigo(a)">Amigo(a)</option>
             <option value="Outro">Outro</option>
           </select>
           {errors.profile && (
+            <span className="mt-2 inline-block font-primary text-red-400 text-sm">
+              Campo obrigatório
+            </span>
+          )}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-6">
+        <div className="sm:col-span-3 lg:col-span-6 xl:col-span-3">
+          <label className="form-label">Cidade</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Ex: São Paulo"
+            {...register('city', { required: true })}
+          />
+          {errors.city && (
+            <span className="mt-2 inline-block font-primary text-red-400 text-sm">
+              Campo obrigatório
+            </span>
+          )}
+        </div>
+
+        <div className="sm:col-span-3 lg:col-span-6 xl:col-span-3">
+          <label className="form-label">Estado (UF)</label>
+          <select
+            className="form-control"
+            defaultValue=""
+            {...register('uf', { required: true })}
+          >
+            <option value="" disabled>Selecione</option>
+            {UFS.map((uf) => (
+              <option key={uf} value={uf}>{uf}</option>
+            ))}
+          </select>
+          {errors.uf && (
             <span className="mt-2 inline-block font-primary text-red-400 text-sm">
               Campo obrigatório
             </span>
@@ -93,15 +133,34 @@ export default function ContactForm() {
           defaultValue=""
           {...register('urgency', { required: true })}
         >
-          <option value="" disabled>
-            Selecione uma opção
-          </option>
+          <option value="" disabled>Selecione</option>
           <option value="Agora">Agora</option>
           <option value="Hoje">Hoje</option>
           <option value="Esta semana">Esta semana</option>
           <option value="Quero só tirar dúvidas">Quero só tirar dúvidas</option>
         </select>
         {errors.urgency && (
+          <span className="mt-2 inline-block font-primary text-red-400 text-sm">
+            Campo obrigatório
+          </span>
+        )}
+      </div>
+
+      <div>
+        <label className="form-label">Como chegou até nós?</label>
+        <select
+          className="form-control"
+          defaultValue=""
+          {...register('source', { required: true })}
+        >
+          <option value="" disabled>Selecione</option>
+          <option value="Google">Google</option>
+          <option value="Indicação">Indicação</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Outro">Outro</option>
+        </select>
+        {errors.source && (
           <span className="mt-2 inline-block font-primary text-red-400 text-sm">
             Campo obrigatório
           </span>
@@ -129,10 +188,9 @@ export default function ContactForm() {
           className="d2c_btn d2c_btn_primary w-full md:w-fit"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Enviando...' : 'Enviar Agora'}
+          {isSubmitting ? 'Abrindo...' : 'Falar no WhatsApp'}
         </button>
       </div>
     </form>
   )
 }
-
