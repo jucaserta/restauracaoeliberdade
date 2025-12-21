@@ -50,12 +50,12 @@ export default function Navbar() {
     <header className="fixed z-40 w-full left-1/2 -translate-x-1/2 md:max-w-[1440px]">
       <div className="container">
         <nav className="d2c_navbar mt-5 p-2 bg-dark-green/50 backdrop-blur-md border border-light-green/20 rounded-2xl lg:rounded-full">
-          <div className="flex items-center justify-between flex-wrap w-full gap-3 lg:gap-6">
+          <div className="flex items-center justify-between w-full gap-3 lg:gap-4 flex-wrap md:flex-nowrap">
             {/* Logo */}
             <button
               type="button"
               onClick={() => handleAnchorClick("#d2c_hero")}
-              className="pl-1 md:pl-3 xl:pl-5"
+              className="pl-1 md:pl-3 xl:pl-5 shrink-0"
               aria-label="Ir para o início"
             >
               <img
@@ -68,13 +68,13 @@ export default function Navbar() {
             </button>
 
             {/* Nav Links */}
-            <div className="hidden lg:flex justify-center mx-auto w-[60%] space-x-10">
+            <div className="hidden lg:flex flex-1 min-w-0 justify-center mx-auto space-x-6 xl:space-x-10">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
                   type="button"
                   onClick={() => handleAnchorClick(link.href)}
-                  className={`nav_link nav_link_Small text-base lg:text-lg font-secondary font-medium capitalize py-2 transition-all duration-600 leading-[1] ${
+                  className={`nav_link nav_link_Small text-[15px] xl:text-lg font-secondary font-medium capitalize py-2 transition-all duration-600 leading-[1] whitespace-nowrap ${
                     isActive(link.href)
                       ? "text-primary"
                       : "text-off-white hover:text-primary"
@@ -86,10 +86,10 @@ export default function Navbar() {
             </div>
 
             {/* Desktop CTAs */}
-            <div className="hidden md:flex md:ml-auto lg:ml-0 items-center gap-3">
+            <div className="hidden md:flex md:ml-auto lg:ml-0 items-center gap-3 shrink-0">
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="d2c_btn d2c_btn_secondary px-6 py-2 lg:px-6 lg:py-[14px] text-off-white border-light-green/20 hover:text-dark-green"
+                className="d2c_btn d2c_btn_secondary px-6 py-2 lg:px-6 lg:py-[14px] text-off-white border-light-green/20 hover:text-dark-green whitespace-nowrap"
               >
                 Ligar agora
               </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noreferrer"
-                className="d2c_btn d2c_btn_primary px-6 py-2 lg:px-6 lg:py-[14px] hover:text-white"
+                className="d2c_btn d2c_btn_primary px-6 py-2 lg:px-6 lg:py-[14px] hover:text-white whitespace-nowrap"
               >
                 WhatsApp
               </a>
@@ -196,7 +196,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-
-
-
