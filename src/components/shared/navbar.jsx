@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
 
-const LOGO = "/images/logo.png"; // public/images/logo.png
-
 const PHONE_DISPLAY = "(11) 98684-3656";
-const PHONE_TEL = "tel:+5511986843656";
-const WHATS_URL = "https://wa.me/5511986843656";
+const PHONE_TEL = "+5511986843656";
+const WHATSAPP_LINK = "https://wa.me/5511986843656?text=Oi!%20Quero%20entender%20como%20funciona%20a%20interna%C3%A7%C3%A3o.";
 
 const navLinks = [
-  { name: "Início", href: "#top" },
-  { name: "Por que escolher", href: "#d2c_choose_us" },
-  { name: "Como ajudamos", href: "#d2c_services" },
-  { name: "Estrutura", href: "#d2c_features" },
-  { name: "Depoimentos", href: "#d2c_testimonial" },
-  { name: "Contato", href: "#d2c_contact" },
+  { name: "Início", href: "/#d2c_home" },
+  { name: "Por que escolher", href: "/#d2c_why_choose_us" },
+  { name: "Como ajudamos", href: "/#d2c_services" },
+  { name: "Estrutura", href: "/#d2c_structure" },
+  { name: "Depoimentos", href: "/#d2c_testimonial" },
+  { name: "Contato", href: "/#d2c_contact" },
 ];
 
 export default function Navbar() {
@@ -22,14 +20,16 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
   }, [mobileOpen]);
 
-  const goTo = (href) => {
-    setMobileOpen(false);
-    if (!href?.startsWith("#")) {
-      window.location.href = href;
-      return;
-    }
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  const getCurrentHash = () => {
+    if (typeof window === "undefined") return "";
+    return window.location.hash || "";
+  };
+
+  const isActive = (href) => {
+    if (typeof window === "undefined") return false;
+    const targetHash = href.includes("#") ? href.split("#")[1] : "";
+    const currentHash = getCurrentHash().replace("#", "");
+    return targetHash && currentHash === targetHash;
   };
 
   return (
@@ -38,9 +38,9 @@ export default function Navbar() {
         <nav className="d2c_navbar mt-5 p-2 bg-dark-green/50 backdrop-blur-md border border-light-green/20 rounded-2xl lg:rounded-full">
           <div className="flex items-center justify-between flex-wrap w-full gap-3 lg:gap-6">
             {/* Logo */}
-            <a href="#top" className="pl-1 md:pl-3 xl:pl-5" onClick={(e) => { e.preventDefault(); goTo("#top"); }}>
+            <a href="/#d2c_home" className="pl-1 md:pl-3 xl:pl-5">
               <img
-                src={LOGO}
+                src="/images/logo.png?v=1"
                 alt="Restauração e Liberdade"
                 width={165}
                 height={60}
@@ -49,42 +49,42 @@ export default function Navbar() {
               />
             </a>
 
-            {/* Links Desktop */}
-            <div className="hidden lg:flex justify-center mx-auto w-[60%] space-x-10">
+            {/* Nav Links */}
+            <div className="hidden lg:flex justify-center mx-auto w-[60%] space-x-8">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={(e) => { e.preventDefault(); goTo(link.href); }}
-                  className="nav_link nav_link_Small text-base lg:text-lg font-secondary font-medium capitalize py-2 transition-all duration-600 leading-[1] text-off-white hover:text-primary"
+                  className={`nav_link nav_link_Small text-base lg:text-lg font-secondary font-medium capitalize py-2 transition-all duration-600 leading-[1] ${
+                    isActive(link.href)
+                      ? "text-primary"
+                      : "text-off-white hover:text-primary"
+                  }`}
                 >
                   {link.name}
                 </a>
               ))}
             </div>
 
-            {/* CTAs Desktop */}
-            <div className="hidden md:flex items-center gap-3 md:ml-auto lg:ml-0">
+            {/* Desktop CTAs */}
+            <div className="hidden md:flex md:ml-auto lg:ml-0 items-center gap-3 pr-1 md:pr-3 xl:pr-5">
               <a
-                href={PHONE_TEL}
+                href={`tel:${PHONE_TEL}`}
                 className="d2c_btn d2c_btn_primary px-6 py-2 lg:px-6 lg:py-[14px] hover:text-white"
-                aria-label={`Ligar agora ${PHONE_DISPLAY}`}
               >
                 Ligue agora
               </a>
-
               <a
-                href={WHATS_URL}
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noreferrer"
-                className="d2c_btn d2c_btn_secondary text-off-white border-light-green/20 hover:text-dark-green px-6 py-2 lg:px-6 lg:py-[14px]"
-                aria-label="Falar no WhatsApp"
+                className="d2c_btn px-6 py-2 lg:px-6 lg:py-[14px] border border-light-green/30 text-off-white hover:text-primary rounded-full transition-all duration-300"
               >
                 WhatsApp
               </a>
             </div>
 
-            {/* Botão Mobile */}
+            {/* Mobile Menu Button */}
             <div className="lg:hidden ml-3">
               <button
                 onClick={() => setMobileOpen((prev) => !prev)}
@@ -100,10 +100,10 @@ export default function Navbar() {
         </nav>
       </div>
 
-      {/* Drawer Mobile */}
+      {/* Mobile Menu Drawer */}
       <aside
         className={`fixed top-0 right-0 w-[320px] h-screen bg-dark-green z-50 transition-all duration-500 ease-in-out ${
-          mobileOpen ? "right-0" : "right-[-110%]"
+          mobileOpen ? "right-0" : "right-[-100%]"
         }`}
       >
         <div className="p-6 pt-4">
@@ -122,8 +122,10 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); goTo(link.href); }}
-                className="text-white text-lg font-primary font-semibold capitalize transition-all duration-300 nav_link hover:text-primary"
+                onClick={() => setMobileOpen(false)}
+                className={`text-white text-lg font-primary font-semibold capitalize transition-all duration-300 nav_link ${
+                  isActive(link.href) ? "text-primary" : ""
+                }`}
               >
                 {link.name}
               </a>
@@ -132,20 +134,27 @@ export default function Navbar() {
 
           <div className="mt-8 space-y-3">
             <a
-              href={PHONE_TEL}
-              className="d2c_btn d2c_btn_primary w-full justify-center hover:text-white"
+              href={`tel:${PHONE_TEL}`}
+              onClick={() => setMobileOpen(false)}
+              className="d2c_btn d2c_btn_primary w-full justify-center"
             >
               Ligue agora
             </a>
-
             <a
-              href={WHATS_URL}
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noreferrer"
-              className="d2c_btn d2c_btn_secondary w-full justify-center text-off-white border-light-green/20 hover:text-dark-green"
+              className="d2c_btn w-full justify-center border border-light-green/30 text-off-white hover:text-primary rounded-full transition-all duration-300"
             >
               WhatsApp
             </a>
+
+            <p className="text-sm text-off-white/70 mt-2">
+              Atendimento 24h. Resposta rápida.
+            </p>
+            <p className="text-sm text-off-white/70">
+              {PHONE_DISPLAY}
+            </p>
           </div>
         </div>
       </aside>
