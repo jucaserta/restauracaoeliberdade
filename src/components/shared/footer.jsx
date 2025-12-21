@@ -20,8 +20,8 @@ export default function Footer() {
                 <img
                   src={FooterLogo.src}
                   alt="Restauração e Liberdade"
-                  width={210}
-                  height={50}
+                  width={380}
+                  height={160}
                   loading="lazy"
                 />
               </a>
@@ -120,6 +120,7 @@ export default function Footer() {
     </footer>
   )
 }
+
 
 
 
