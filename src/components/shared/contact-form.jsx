@@ -129,9 +129,10 @@ export default function ContactForm() {
           className="d2c_btn d2c_btn_primary w-full md:w-fit"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Enviando...' : 'Falar no WhatsApp'}
+          {isSubmitting ? 'Enviando...' : 'Enviar Agora'}
         </button>
       </div>
     </form>
   )
 }
+
