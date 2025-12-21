@@ -65,11 +65,19 @@ export default function WhyChooseUs() {
           <div className="col-span-12 lg:col-span-6 xl:col-span-5 d2c_card flex flex-col gap-4">
             <div className="text-center md:text-left" data-aos="fade-slide-up" data-aos-delay="400">
               <h3 className="mb-2">{detailOne?.title || "Unidade 1"}</h3>
-              <p className="text-base md:text-lg">{detailOne?.description || ""}</p>
+              <p className="text-base md:text-lg">
+                {detailOne?.description || ""}
+              </p>
             </div>
 
             <div className="w-full" data-aos="fade-slide-up" data-aos-delay="600">
-              <MiniSlider images={detailOne?.slider?.images || []} />
+              <MiniSlider
+                images={detailOne?.slider?.images || []}
+                autoPlay={true}
+                interval={3500}
+                transitionMs={450}
+                pauseOnHover={true}
+              />
             </div>
           </div>
         </div>
