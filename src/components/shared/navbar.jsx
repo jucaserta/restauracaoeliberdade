@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "../../images/logo.png";
+import Logo from "../../assets/images/logo/logo.png";
 
 const PHONE_TEL = "5511986843656";
 const WHATSAPP =
