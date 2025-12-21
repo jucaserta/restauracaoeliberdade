@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Logo from "../../images/logo.png";
 
 const PHONE_TEL = "5511986843656";
 const WHATSAPP =
@@ -195,4 +196,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 
