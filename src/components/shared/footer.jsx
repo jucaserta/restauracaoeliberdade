@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="relative bg-off-white border-t border-t-light-green/40">
       <div className="container space-y-6 md:space-y-10 xl:space-y-18 pt-14 lg:pt-20">
         <div className="grid grid-cols-12 gap-6 md:gap-8">
-          {/* Logo & texto + CTAs */}
+          {/* Logo + texto + CTAs */}
           <div className="col-span-12 lg:col-span-5">
             <div className="space-y-5 d2c_footer_content xl:max-w-[85%]">
               <a href="#d2c_hero" className="inline-block">
@@ -34,7 +34,7 @@ export default function Footer() {
               <div className="flex flex-col sm:flex-row gap-3 pt-1">
                 <a
                   href={`tel:${PHONE_TEL}`}
-                  className="d2c_btn d2c_btn_primary hover:text-white hover:border-light-green/20 w-full sm:w-max text-center"
+                  className="d2c_btn d2c_btn_primary hover:text-white hover:border-light-green/20 w-full sm:w-[170px] text-center"
                 >
                   Ligue agora
                 </a>
@@ -43,16 +43,9 @@ export default function Footer() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noreferrer"
-                  className="d2c_btn d2c_btn_secondary border-light-green/20 hover:text-dark-green w-full sm:w-max text-center"
+                  className="d2c_btn d2c_btn_secondary border-light-green/20 hover:text-dark-green w-full sm:w-[190px] text-center"
                 >
                   Falar no WhatsApp
-                </a>
-
-                <a
-                  href="#d2c_contact"
-                  className="d2c_btn d2c_btn_secondary border-light-green/20 hover:text-dark-green w-full sm:w-max text-center"
-                >
-                  Abrir formulário
                 </a>
               </div>
             </div>
@@ -110,7 +103,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="d2c_copyright">
           <p className="text-base">
             © {year} <span className="font-bold text-base">Restauração e Liberdade</span>. Todos os direitos reservados.
