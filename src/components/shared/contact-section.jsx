@@ -8,6 +8,9 @@ import contactDetails from '../../jsons/contact-details.json'
 const MAPS_EMBED =
   'https://www.google.com/maps?q=Cl%C3%ADnica%20Liberdade%20e%20Restaura%C3%A7%C3%A3o%20de%20Recupera%C3%A7%C3%A3o,%20R.%20Ardu%C3%ADno%20Novela,%20103%20-%20Jardim%20Irene,%20Santo%20Andr%C3%A9%20-%20SP,%2009170-570&output=embed'
 
+const MAPS_LINK =
+  'https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica%20Liberdade%20e%20Restaura%C3%A7%C3%A3o%20de%20Recupera%C3%A7%C3%A3o,%20R.%20Ardu%C3%ADno%20Novela,%20103%20-%20Jardim%20Irene,%20Santo%20Andr%C3%A9%20-%20SP,%2009170-570'
+
 export default function ContactSection() {
   return (
     <section id="d2c_contact">
@@ -47,9 +50,9 @@ export default function ContactSection() {
             <ContactForm />
           </div>
 
-          {/* Info + Mapa */}
+          {/* Info + Map */}
           <div
-            className="d2c_card p-8 xl:p-14 space-y-8 md:space-y-10"
+            className="d2c_card p-8 xl:p-14"
             data-aos="fade-up"
             data-aos-delay="1200"
           >
@@ -62,7 +65,7 @@ export default function ContactSection() {
               </p>
             </div>
 
-            <div className="space-y-4 md:space-y-6">
+            <div className="mt-8 space-y-5">
               {contactDetails.map((item, index) => (
                 <div key={index} className="space-y-2">
                   <h4 className="text-dark-green">{item.title}</h4>
@@ -91,19 +94,38 @@ export default function ContactSection() {
               ))}
             </div>
 
-            <div className="rounded-2xl border border-light-green overflow-hidden relative">
-              <iframe
-                src={MAPS_EMBED}
-                loading="lazy"
-                className="w-full h-[260px]"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Mapa - Clínica Liberdade e Restauração"
-              />
-            </div>
+            {/* MINI-CARD DO MAPA (fica tudo “no quadrado”) */}
+            <div className="mt-8 rounded-xl border border-light-green bg-white p-4">
+              <div className="flex items-center justify-between gap-3 mb-3">
+                <p className="text-sm text-darkgray">
+                  Clínica Liberdade e Restauração — Santo André/SP
+                </p>
 
-            <p className="text-sm text-darkgray">
-              Chegando por WhatsApp, mande seu bairro/cidade. A equipe orienta o melhor caminho.
-            </p>
+                <a
+                  href={MAPS_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm underline underline-offset-4"
+                >
+                  Ver no Google Maps
+                </a>
+              </div>
+
+              <div className="rounded-xl border border-light-green/60 overflow-hidden">
+                <iframe
+                  src={MAPS_EMBED}
+                  loading="lazy"
+                  className="block w-full h-[260px] md:h-[320px]"
+                  style={{ border: 0 }}
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mapa - Clínica Liberdade e Restauração"
+                />
+              </div>
+
+              <p className="text-sm text-darkgray mt-3">
+                Chegando por WhatsApp, mande seu bairro/cidade. A equipe orienta o melhor caminho.
+              </p>
+            </div>
           </div>
         </div>
       </div>
