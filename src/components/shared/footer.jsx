@@ -11,11 +11,11 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-off-white border-t border-t-light-green/40">
-      <div className="container space-y-6 md:space-y-10 xl:space-y-18 pt-14 lg:pt-20">
-        <div className="grid grid-cols-12 gap-6 md:gap-8">
-          {/* Logo + texto + CTAs */}
+      <div className="container pt-14 lg:pt-20 space-y-10">
+        <div className="grid grid-cols-12 gap-6 md:gap-10">
+          {/* Coluna 1 */}
           <div className="col-span-12 lg:col-span-5">
-            <div className="space-y-5 d2c_footer_content xl:max-w-[85%]">
+            <div className="space-y-5 d2c_footer_content xl:max-w-[90%]">
               <a href="#d2c_hero" className="inline-block">
                 <img
                   src={FooterLogo.src}
@@ -31,22 +31,29 @@ export default function Footer() {
                 Você fala com quem resolve e entende os próximos passos sem enrolação.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-1">
-                <a
-                  href={`tel:${PHONE_TEL}`}
-                  className="d2c_btn d2c_btn_primary hover:text-white hover:border-light-green/20 w-full sm:w-[170px] text-center"
-                >
-                  Ligue agora
-                </a>
+              {/* CARD (quadrado) para os botões */}
+              <div className="rounded-xl border border-light-green bg-white p-4 sm:p-5">
+                <p className="text-sm text-darkgray mb-3">
+                  Fale com a equipe agora:
+                </p>
 
-                <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="d2c_btn d2c_btn_secondary border-light-green/20 hover:text-dark-green w-full sm:w-[190px] text-center"
-                >
-                  Falar no WhatsApp
-                </a>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <a
+                    href={`tel:${PHONE_TEL}`}
+                    className="d2c_btn d2c_btn_primary w-full text-center"
+                  >
+                    Ligue agora
+                  </a>
+
+                  <a
+                    href={WHATSAPP}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="d2c_btn d2c_btn_secondary border-light-green/20 hover:text-dark-green w-full text-center"
+                  >
+                    Falar no WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -65,7 +72,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contato com ícones + números */}
+          {/* Contato (card) */}
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="d2c_footer_content">
               <h4 className="d2c_footer_title">Contato</h4>
@@ -103,6 +110,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Copyright */}
         <div className="d2c_copyright">
           <p className="text-base">
             © {year} <span className="font-bold text-base">Restauração e Liberdade</span>. Todos os direitos reservados.
