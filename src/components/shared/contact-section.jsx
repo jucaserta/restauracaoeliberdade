@@ -31,10 +31,11 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 mt-8 gap-4 md:gap-6">
+        {/* IMPORTANTE: items-stretch + cards com h-full */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-8 gap-4 md:gap-6 items-stretch">
           {/* Form */}
           <div
-            className="d2c_card p-8 xl:p-14"
+            className="d2c_card p-8 xl:p-14 h-full"
             data-aos="fade-up"
             data-aos-delay="1000"
           >
@@ -50,9 +51,9 @@ export default function ContactSection() {
             <ContactForm />
           </div>
 
-          {/* Info + Map */}
+          {/* Info + Map (flex para preencher até o final do card) */}
           <div
-            className="d2c_card p-8 xl:p-14"
+            className="d2c_card p-8 xl:p-14 h-full flex flex-col"
             data-aos="fade-up"
             data-aos-delay="1200"
           >
@@ -94,8 +95,8 @@ export default function ContactSection() {
               ))}
             </div>
 
-            {/* MINI-CARD DO MAPA (fica tudo “no quadrado”) */}
-            <div className="mt-8 rounded-xl border border-light-green bg-white p-4">
+            {/* MAPA preenchendo o resto do quadrado */}
+            <div className="mt-8 rounded-xl border border-light-green bg-white p-4 flex-1 flex flex-col">
               <div className="flex items-center justify-between gap-3 mb-3">
                 <p className="text-sm text-darkgray">
                   Clínica Liberdade e Restauração — Santo André/SP
@@ -111,11 +112,11 @@ export default function ContactSection() {
                 </a>
               </div>
 
-              <div className="rounded-xl border border-light-green/60 overflow-hidden">
+              <div className="rounded-xl border border-light-green/60 overflow-hidden flex-1">
                 <iframe
                   src={MAPS_EMBED}
                   loading="lazy"
-                  className="block w-full h-[260px] md:h-[320px]"
+                  className="block w-full h-full min-h-[320px]"
                   style={{ border: 0 }}
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Mapa - Clínica Liberdade e Restauração"
