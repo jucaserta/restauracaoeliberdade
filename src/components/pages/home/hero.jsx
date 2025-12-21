@@ -83,7 +83,6 @@ export default function Hero() {
                   height={500}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#0E1901]/30"></div>
               </div>
             </div>
 
@@ -96,7 +95,6 @@ export default function Hero() {
                   height={500}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#0E1901]/30"></div>
               </div>
             </div>
 
@@ -122,3 +120,4 @@ export default function Hero() {
     </section>
   )
 }
+
