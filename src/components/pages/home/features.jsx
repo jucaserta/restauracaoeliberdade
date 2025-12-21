@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import Features from '../../../jsons/features.json'
 import SectionHeader from '../../shared/section-header'
 import detailThree from '../../../jsons/details-set-4.json'
@@ -45,42 +46,39 @@ export default function FeaturesSection() {
             </div>
           ))}
 
-          {/* Bloco final */}
+          {/* Bloco final: esquerda Unidade 2 | direita Unidade 3 */}
           <div
             className="col-span-12 d2c_card overflow-hidden"
             data-aos="fade-slide-up"
             data-aos-delay="600"
           >
-            <div className="grid lg:grid-cols-2 gap-4 md:gap-20">
-              {/* Onde era "Clinic That Understands..." -> Unidade 2 */}
-              <div className="space-y-4 xl:space-y-5">
+            <div className="grid lg:grid-cols-2 gap-4 md:gap-10">
+              {/* Unidade 2 */}
+              <div className="space-y-4">
                 <div className="space-y-2 text-center lg:text-left">
                   <h3>{unit2?.title || 'Unidade 2'}</h3>
                   <p className="text-base md:text-lg">{unit2?.description || ''}</p>
                 </div>
 
-                <MiniSlider images={unit2?.slider?.images || []} autoPlay={true} interval={3500} />
+                <MiniSlider
+                  images={unit2?.slider?.images || []}
+                  autoPlay={true}
+                  interval={3500}
+                />
               </div>
 
-              {/* Onde era Pediatric/Doctor-led -> Unidade 2 e Unidade 3 lado a lado */}
-              <div className="grid grid-cols-12 gap-4 md:gap-6 items-start">
-                <div className="col-span-12 md:col-span-6 space-y-3">
-                  <div className="space-y-2 text-center md:text-left">
-                    <h4>{unit2?.title || 'Unidade 2'}</h4>
-                    <p className="text-base">{unit2?.description || ''}</p>
-                  </div>
-
-                  <MiniSlider images={unit2?.slider?.images || []} autoPlay={true} interval={3800} />
+              {/* Unidade 3 */}
+              <div className="space-y-4">
+                <div className="space-y-2 text-center lg:text-left">
+                  <h3>{unit3?.title || 'Unidade 3'}</h3>
+                  <p className="text-base md:text-lg">{unit3?.description || ''}</p>
                 </div>
 
-                <div className="col-span-12 md:col-span-6 space-y-3">
-                  <div className="space-y-2 text-center md:text-left">
-                    <h4>{unit3?.title || 'Unidade 3'}</h4>
-                    <p className="text-base">{unit3?.description || ''}</p>
-                  </div>
-
-                  <MiniSlider images={unit3?.slider?.images || []} autoPlay={true} interval={3800} />
-                </div>
+                <MiniSlider
+                  images={unit3?.slider?.images || []}
+                  autoPlay={true}
+                  interval={3500}
+                />
               </div>
             </div>
           </div>
