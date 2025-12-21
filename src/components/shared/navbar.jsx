@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Início", href: "#d2c_hero" },
   { name: "Por que escolher", href: "#d2c_choose_us" },
   { name: "Estrutura", href: "#d2c_features" },
+  { name: "Depoimentos", href: "#d2c_testimonial" },
   { name: "Contato", href: "#d2c_contact" },
 ];
 
