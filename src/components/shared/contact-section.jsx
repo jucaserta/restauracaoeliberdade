@@ -5,84 +5,108 @@ import SectionHeader from './section-header'
 import ArrowRight from '../../assets/images/arrow-right.png'
 import contactDetails from '../../jsons/contact-details.json'
 
+const MAPS_EMBED =
+  'https://www.google.com/maps?q=Cl%C3%ADnica%20Liberdade%20e%20Restaura%C3%A7%C3%A3o%20de%20Recupera%C3%A7%C3%A3o,%20R.%20Ardu%C3%ADno%20Novela,%20103%20-%20Jardim%20Irene,%20Santo%20Andr%C3%A9%20-%20SP,%2009170-570&output=embed'
+
 export default function ContactSection() {
-    return (
-        <>
-            <section id="d2c_contact">
-                <div className="container">
-                    <div className="grid md:grid-cols-2 gap-4 md:gap-6 items-center">
-                        <SectionHeader
-                            subheading="Ready to Talk"
-                            heading="Get in Touch With Our Team"
-                            className="w-full"
-                        />
-                        <p
-                            data-aos="fade-slide-up"
-                            data-aos-delay="400"
-                            className="xl:max-w-[80%]"
-                        >
-                            We respond within one business day and guide you through every next step
-                        </p>
-                    </div>
+  return (
+    <section id="d2c_contact">
+      <div className="container">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 items-center">
+          <SectionHeader
+            subheading="Contato"
+            heading="Fale com a equipe agora"
+            className="w-full"
+          />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 mt-8 gap-4 md:gap-6">
-                        {/* Contact Form */}
-                        <div
-                            className="d2c_card p-8 xl:p-14"
-                            data-aos="fade-up"
-                            data-aos-delay="1000"
-                        >
-                            <ContactForm />
-                        </div>
+          <p
+            data-aos="fade-slide-up"
+            data-aos-delay="400"
+            className="xl:max-w-[85%]"
+          >
+            Atendimento 24h. Você fala com quem resolve e recebe orientação clara sobre os próximos passos.
+          </p>
+        </div>
 
-                        {/* Contact Info + Map */}
-                        <div
-                            className="d2c_card p-8 xl:p-14 space-y-8 md:space-y-14"
-                            data-aos="fade-up"
-                            data-aos-delay="1200"
-                        >
-                            <div className="space-y-4 text-center md:text-left">
-                                <h2 className="d2c_title">Let&apos;s Talk</h2>
-                                <p className="text-xl">Asked anything, or just say Hi!</p>
-                            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-8 gap-4 md:gap-6">
+          {/* Form */}
+          <div
+            className="d2c_card p-8 xl:p-14"
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
+            <div className="space-y-2 mb-6">
+              <h3 className="text-2xl font-semibold text-dark-green">
+                Envie uma mensagem rápida
+              </h3>
+              <p className="text-base">
+                Preencha e a gente abre o WhatsApp já com tudo pronto.
+              </p>
+            </div>
 
-                            <div className="space-y-4 md:space-y-6">
-                                {contactDetails.map((item, index) => (
-                                    <div key={index} className="space-y-2">
-                                        <h4>{item.title}</h4>
-                                        <div className="flex gap-2 items-baseline xl:items-center">
-                                            <img
-                                                src={ArrowRight.src}
-                                                alt="Right Arrow"
-                                                width={20}
-                                                height={20}
-                                                className="max-w-fit"
-                                            />
-                                            {item.link ? (
-                                                <a href={item.link} className="text-xl">
-                                                    {item.value}
-                                                </a>
-                                            ) : (
-                                                <p className="text-xl">{item.value}</p>
-                                            )}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+            <ContactForm />
+          </div>
 
-                            {/* Google Map */}
-                            <div className="rounded-2xl border border-light-green overflow-hidden relative group transition-all duration-500">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989264.406238872!2d-110.19273863416588!3d42.97398627065218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875ee23448e12e69%3A0x26b02279d27d382f!2sWyoming%2C%20USA!5e0!3m2!1sen!2sbd!4v1750506182076!5m2!1sen!2sbd"
-                                    loading="lazy"
-                                    className="w-full h-[230px]"
-                                ></iframe>
-                                <div className="bg-off-white/70 absolute transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full transition-all duration-600 group-hover:w-0 group-hover:h-0"></div>
-                            </div>
-                        </div>
-                    </div>
+          {/* Info + Mapa */}
+          <div
+            className="d2c_card p-8 xl:p-14 space-y-8 md:space-y-10"
+            data-aos="fade-up"
+            data-aos-delay="1200"
+          >
+            <div className="space-y-3 text-center md:text-left">
+              <h3 className="text-2xl font-semibold text-dark-green">
+                Canais de atendimento
+              </h3>
+              <p className="text-base">
+                Prefere ligação ou WhatsApp? Escolha abaixo.
+              </p>
+            </div>
+
+            <div className="space-y-4 md:space-y-6">
+              {contactDetails.map((item, index) => (
+                <div key={index} className="space-y-2">
+                  <h4 className="text-dark-green">{item.title}</h4>
+                  <div className="flex gap-2 items-baseline xl:items-center">
+                    <img
+                      src={ArrowRight.src}
+                      alt="Seta"
+                      width={20}
+                      height={20}
+                      className="max-w-fit"
+                    />
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target={item.link.includes('wa.me') ? '_blank' : undefined}
+                        rel={item.link.includes('wa.me') ? 'noreferrer' : undefined}
+                        className="text-xl"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-xl">{item.value}</p>
+                    )}
+                  </div>
                 </div>
-            </section>
-        </>
-    )
+              ))}
+            </div>
+
+            <div className="rounded-2xl border border-light-green overflow-hidden relative">
+              <iframe
+                src={MAPS_EMBED}
+                loading="lazy"
+                className="w-full h-[260px]"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mapa - Clínica Liberdade e Restauração"
+              />
+            </div>
+
+            <p className="text-sm text-darkgray">
+              Chegando por WhatsApp, mande seu bairro/cidade. A equipe orienta o melhor caminho.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
