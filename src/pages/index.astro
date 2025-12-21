@@ -8,16 +8,15 @@ import HealthCtaSection from '../components/shared/cta-1';
 import Testimonial from '../components/pages/home/testimonial';
 import HomeBlogSection from '../components/pages/home/home-blog-section';
 import ContactSection from '../components/shared/contact-section';
-
 ---
 
 <Layout>
-	<Hero />
-	<WhyChooseUs />
-	<ServicesSection />
-	<FeaturesSection client:only="react" />
-	<HealthCtaSection client:only="react" />
-	<Testimonial client:only="react" />
-	<HomeBlogSection />
-	<ContactSection client:only="react" />
+  <Hero />
+  <WhyChooseUs client:visible />
+  <ServicesSection />
+  <FeaturesSection client:only="react" />
+  <HealthCtaSection client:only="react" />
+  <Testimonial client:only="react" />
+  <HomeBlogSection />
+  <ContactSection client:only="react" />
 </Layout>
