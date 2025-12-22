@@ -2,7 +2,7 @@
   {
     "title": "Atendimento especializado e humano",
     "description": "Nossa equipe atua com experiência real, escuta ativa e foco total na recuperação. Aqui você fala direto com quem resolve.",
-    "link": "tel:+5511986843656",
+    "link": "tel:+5511916950673",
     "delay": 400,
     "gridClass": "col-span-12 md:col-span-6 lg:col-span-4",
     "buttonText": "Ligar agora"
@@ -10,7 +10,7 @@
   {
     "title": "Estrutura preparada para acolher",
     "description": "Ambiente seguro, discreto e organizado para internação e acompanhamento, respeitando cada etapa do processo.",
-    "link": "https://wa.me/5511986843656?text=Oi%21%20Quero%20falar%20com%20a%20equipe.",
+    "link": "https://wa.me/5511916950673?text=Oi%21%20Quero%20falar%20com%20a%20equipe.",
     "delay": 700,
     "gridClass": "col-span-12 md:col-span-6 lg:col-span-4",
     "buttonText": "Falar no WhatsApp"
@@ -18,7 +18,7 @@
   {
     "title": "Tratamento individualizado",
     "description": "Cada caso é avaliado com cuidado. Orientamos a família, explicamos o processo e seguimos com acompanhamento contínuo.",
-    "link": "https://wa.me/5511986843656?text=Oi%21%20Quero%20falar%20com%20a%20equipe.",
+    "link": "https://wa.me/5511916950673?text=Oi%21%20Quero%20falar%20com%20a%20equipe.",
     "delay": 1000,
     "gridClass": "col-span-12 lg:col-span-4 xl:col-span-4",
     "buttonText": "Falar no WhatsApp"

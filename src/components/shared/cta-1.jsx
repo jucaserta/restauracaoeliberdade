@@ -3,8 +3,8 @@
 import React from 'react'
 import WhiteRightArrow from '../../assets/images/white-arrow-right.png'
 
-const PHONE_TEL = '5511986843656'
-const WHATSAPP = 'https://wa.me/5511986843656?text=Oi!%20Preciso%20de%20atendimento%20agora.'
+const PHONE_TEL = '5511916950673'
+const WHATSAPP = 'https://wa.me/5511916950673?text=Oi!%20Preciso%20de%20atendimento%20agora.'
 
 export default function HealthCtaSection() {
   return (

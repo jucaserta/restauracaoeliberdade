@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import FooterLogo from "../../assets/images/logo/logo-footernovo.png";
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 
-const PHONE_DISPLAY = '(11) 98684-3656'
-const PHONE_TEL = '5511986843656'
-const WHATSAPP = 'https://wa.me/5511986843656?text=Oi!%20Preciso%20de%20atendimento%20agora.'
+const PHONE_DISPLAY = '(11) 91695-0673'
+const PHONE_TEL = '5511916950673'
+const WHATSAPP = 'https://wa.me/5511916950673?text=Oi!%20Preciso%20de%20atendimento%20agora.'
 
 export default function Footer() {
   const [year] = useState(new Date().getFullYear())

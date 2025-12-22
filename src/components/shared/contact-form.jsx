@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import Toast from 'react-hot-toast'
 
-const WHATSAPP = 'https://wa.me/5511986843656'
+const WHATSAPP = 'https://wa.me/5511916950673'
 
 const UFS = [
   'AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'

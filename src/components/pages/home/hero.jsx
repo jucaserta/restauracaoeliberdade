@@ -2,8 +2,8 @@ import React from 'react'
 import HeroImage1 from '../../../assets/images/hero_image_1.jpg'
 import HeroImage2 from '../../../assets/images/hero_image_2.jpg'
 
-const PHONE_TEL = '5511986843656'
-const WHATSAPP = 'https://wa.me/5511986843656?text=Oi!%20Preciso%20de%20atendimento%20agora.'
+const PHONE_TEL = '5511916950673'
+const WHATSAPP = 'https://wa.me/5511916950673?text=Oi!%20Preciso%20de%20atendimento%20agora.'
 
 export default function Hero() {
   return (
@@ -50,7 +50,7 @@ export default function Hero() {
             </div>
 
             {/* REMOVIDO: número escrito abaixo dos botões */}
-            {/* <p className="text-off-white/80 text-sm mt-2">(11) 98684-3656</p> */}
+            {/* <p className="text-off-white/80 text-sm mt-2">(11) 91695-0673</p> */}
           </div>
 
           {/* Hero right */}
